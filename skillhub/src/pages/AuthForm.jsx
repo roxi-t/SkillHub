@@ -3,7 +3,7 @@ import Login from "components/login/Login";
 import Overlay from "components/login/Overlay";
 import Register from "components/login/Register";
 
-function LoginForm() {
+function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
@@ -19,4 +19,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default AuthForm;

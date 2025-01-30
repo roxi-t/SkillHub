@@ -5,6 +5,7 @@
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
       "configs/*": ["src/configs/*"],
+      "services/*": ["src/services/*"],
       "constants/*": ["src/assets/*"],
       "pages/*": ["src/assets/*"],
       "router/*": ["src/router/*"],

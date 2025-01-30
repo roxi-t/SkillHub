@@ -11,7 +11,7 @@ function InputField({ type, placeholder, value, onChange, error }) {
         }`}
       />
       {error && (
-        <p className="text-red-500 text-xs text-right mt-2 mb-2 font-yekan font-bold">
+        <p className="text-red-500 text-xs text-right mt-2 font-yekan font-bold">
           {error}
         </p>
       )}
