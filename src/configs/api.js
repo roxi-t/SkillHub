@@ -30,7 +30,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
       const res = await getNewTokens();
       if (!res?.response) return;
-      setCookie(res.response.data);
+      setCookie({ access: res.response.data.access, refresh: res.refreshToken });
       return api(originalRequest);
     }
   }

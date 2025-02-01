@@ -10,7 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 
 function Login() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({});
   const { refetch } = useQuery({
     queryKey: ["profile"],
@@ -25,10 +25,10 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const validationErrors = await validations(formData);
-    setErrors(validationErrors);
-    if (Object.keys(validationErrors).length === 0) {
+    if (Object.keys(validationErrors).length > 0) setErrors(validationErrors);
+    else {
       const { response, error } = await authLogin(
-        formData.email,
+        formData.username,
         formData.password
       );
       if (response) {
@@ -67,11 +67,11 @@ function Login() {
         </Link>
       </div>
       <InputField
-        type="email"
-        placeholder="ایمیل"
-        value={formData.email}
-        onChange={handleInputChange("email")}
-        error={errors.email}
+        type="username"
+        placeholder="نام کاربری"
+        value={formData.username}
+        onChange={handleInputChange("username")}
+        error={errors.username}
       />
       <InputField
         type="password"

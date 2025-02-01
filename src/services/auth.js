@@ -1,9 +1,19 @@
 import api from "configs/api";
 
-const authLogin = async (email, password) => {
+const authLogin = async (username, password) => {
   try {
-    const response = await api.post("api/token/", {
-      username: email,
+    const response = await api.post("api/token/", { username, password });
+    return { response };
+  } catch (error) {
+    return { error };
+  }
+};
+
+const authRegister = async (username, email, password) => {
+  try {
+    const response = await api.post("api/user/register/", {
+      username,
+      email,
       password,
     });
     return { response };
@@ -12,4 +22,4 @@ const authLogin = async (email, password) => {
   }
 };
 
-export { authLogin };
+export { authLogin, authRegister };

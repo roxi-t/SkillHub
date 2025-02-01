@@ -8,7 +8,7 @@ const getNewTokens = async () => {
     const response = await api.post("api/token/refresh/", {
       refresh: refreshToken,
     });
-    return { response };
+    return { response , refreshToken };
   } catch (error) {
     return { error };
   }
