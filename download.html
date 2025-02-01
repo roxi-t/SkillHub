@@ -7,35 +7,62 @@
     <title>Download</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="./Fonts/fonts.css">
+    <link rel="stylesheet" href="css/output.css">
 </head>
 
-<body>
-    <header>
-        <div class="logo">
-            <img src="./asstes/icons/skillhublogo.svg" alt="SkillHub Logo">
-            <span>SKILL<span style="color: #615EFC;">HUB</span></span>
+<body class="bg-[#EDF2F6] text-[#494953] font-sans">
+    <header class="flex justify-between items-center px-12 py-5 bg-[#EDF2F6] md:px-5 md:py-5 sm:px-4 sm:py-4 sm:w-full">
+        <!-- Logo Section -->
+        <div class="flex items-center sm:ml-5 sm:justify-center">
+            <img src="./asstes/icons/skillhublogo.svg" alt="SkillHub Logo" class="w-8 mr-2 ml-4 ">
+            <span class="text-1.8xl font-bold text-[#6A7EFC] lg:text-2xl">SKILL<span class="text-[#615EFC]">HUB</span></span>
         </div>
-
-        <!-- آیکون منوی همبرگری و چک‌باکس -->
-        <input type="checkbox" id="menuToggle" class="menu-toggle">
-        <label for="menuToggle" class="menu-icon">
-            <div></div>
-            <div></div>
-            <div></div>
+        <!-- Hamburger Menu Icon and Toggle Checkbox -->
+        <input type="checkbox" id="menuToggle" class="hidden peer">
+        <label for="menuToggle" class="block cursor-pointer md:hidden" id="menuIcon">
+            <div class="w-6 h-1 bg-[#494953] mb-1 transition-all ease-in-out duration-300"></div>
+            <div class="w-6 h-1 bg-[#494953] mb-1 transition-all ease-in-out duration-300"></div>
+            <div class="w-6 h-1 bg-[#494953] mb-1 transition-all ease-in-out duration-300"></div>
         </label>
 
-        <nav class="nav-links">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="./contact.html" target="_blank">Contact Us</a></li>
+        <!-- Navigation Menu -->
+        <nav class="flex justify-between items-center px-6 py-4">
+            <ul class="flex gap-5 mr-5 list-none md:flex hidden" id="navLinks">
+                <li><a href="./index.html" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]">Home</a></li>
+                <li><a href="#" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]">Download</a></li>
+                <li><a href="./contact.html" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]" target="_blank">Contact Us</a></li>
             </ul>
-            <div class="auth-buttons">
-                <a href="./login.html" target="_blank" class="login-btn">Login</a>
-                <a href="#" class="get-app-btn">Get The App</a>
+
+            <!-- Authentication and App Download Buttons -->
+            <div class="flex items-center md:flex hidden" id="authButtons">
+                <a href="./login.html" target="_blank" class="px-6 py-3 text-lg rounded-full border border-[#7161ef] text-[#494953] transition-all duration-300 hover:bg-[#6A7EFC] hover:text-white">
+                    Login
+                </a>
+                <a href="#" class="px-6 py-3 ml-3 text-lg rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d]">
+                    Get The App
+                </a>
             </div>
         </nav>
+
+        <!-- Mobile Navigation Menu (visible when checkbox is checked) -->
+        <div class="absolute top-16 left-0 w-full bg-[#EDF2F6] p-4 shadow-lg md:hidden hidden peer-checked:flex flex-col" id="mobileMenu">
+            <ul class="flex flex-col gap-4 mb-4 text-center">
+                <li><a href="./index.html" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]">Home</a></li>
+                <li><a href="#" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]">Download</a></li>
+                <li><a href="./contact.html" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]" target="_blank">Contact Us</a></li>
+            </ul>
+            <div class="flex flex-col gap-3 items-center">
+                <a href="./login.html" target="_blank" class="w-full text-center px-6 py-3 text-sm rounded-full border border-[#7161ef] text-[#494953] transition-all duration-300 hover:bg-[#6A7EFC] hover:text-white">
+                    Login
+                </a>
+                <a href="#" class="w-full text-center px-6 py-3 ml-3 text-sm rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d]">
+                    Get The App
+                </a>
+            </div>
+        </div>
+
     </header>
+    
 
     <section class="download-right-left">
         <div class="download-left">
@@ -70,6 +97,7 @@
             </div>
         </div>
     </section>
+    
 
     <section class="results-section">
         <div class="results-text">

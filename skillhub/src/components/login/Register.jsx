@@ -27,9 +27,7 @@ function Register() {
     const validationErrors = validations(formData);
     if (Object.keys(validationErrors).length > 0) setErrors(validationErrors);
     else {
-      console.log("نام:", formData.name);
-      console.log("ایمیل:", formData.email);
-      console.log("گذرواژه:", formData.password);
+      
     }
   };
 
