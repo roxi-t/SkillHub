@@ -11,12 +11,13 @@
 </head>
 
 <body class="bg-[#EDF2F6] text-[#494953] font-sans">
-    <header class="flex justify-between items-center px-12 py-5 bg-[#EDF2F6] md:px-5 md:py-5 sm:px-4 sm:py-4 sm:w-full">
+    <header class="flex justify-between items-center bg-[#EDF2F6] sm:w-full lg:pl-16">
         <!-- Logo Section -->
-        <div class="flex items-center sm:ml-5 sm:justify-center">
-            <img src="./asstes/icons/skillhublogo.svg" alt="SkillHub Logo" class="w-8 mr-2 ml-4 ">
+        <div class="flex items-center sm:justify-center">
+            <img src="./asstes/icons/skillhublogo.svg" alt="SkillHub Logo" class="w-8 mr-2 ml-4">
             <span class="text-1.8xl font-bold text-[#6A7EFC] lg:text-2xl">SKILL<span class="text-[#615EFC]">HUB</span></span>
         </div>
+    
         <!-- Hamburger Menu Icon and Toggle Checkbox -->
         <input type="checkbox" id="menuToggle" class="hidden peer">
         <label for="menuToggle" class="block cursor-pointer md:hidden" id="menuIcon">
@@ -24,7 +25,7 @@
             <div class="w-6 h-1 bg-[#494953] mb-1 transition-all ease-in-out duration-300"></div>
             <div class="w-6 h-1 bg-[#494953] mb-1 transition-all ease-in-out duration-300"></div>
         </label>
-
+    
         <!-- Navigation Menu -->
         <nav class="flex justify-between items-center px-6 py-4">
             <ul class="flex gap-5 mr-5 list-none md:flex hidden" id="navLinks">
@@ -32,7 +33,7 @@
                 <li><a href="#" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]">Download</a></li>
                 <li><a href="./contact.html" class="text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC]" target="_blank">Contact Us</a></li>
             </ul>
-
+    
             <!-- Authentication and App Download Buttons -->
             <div class="flex items-center md:flex hidden" id="authButtons">
                 <a href="./login.html" target="_blank" class="px-6 py-3 text-lg rounded-full border border-[#7161ef] text-[#494953] transition-all duration-300 hover:bg-[#6A7EFC] hover:text-white">
@@ -43,7 +44,7 @@
                 </a>
             </div>
         </nav>
-
+    
         <!-- Mobile Navigation Menu (visible when checkbox is checked) -->
         <div class="absolute top-16 left-0 w-full bg-[#EDF2F6] p-4 shadow-lg md:hidden hidden peer-checked:flex flex-col" id="mobileMenu">
             <ul class="flex flex-col gap-4 mb-4 text-center">
@@ -60,43 +61,57 @@
                 </a>
             </div>
         </div>
-
     </header>
     
-
-    <section class="download-right-left">
-        <div class="download-left">
-            <div class="badge" style="margin-bottom: 60px;">
-                <img src="asstes/icons/globegroup.svg" alt="Shield Icon">
-                <span>New Gen, Smart Interactions!</span>
+    <section class="flex flex-col lg:flex-row gap-8 pb-8 lg:p-16">
+        <!-- Left Section: Text, App Download Links, and User Testimonials -->
+        <div class="pt-10 p-6 lg:w-[55%] text-center lg:text-left">
+            <!-- Notification Banner with Icon -->
+            <div class="inline-flex items-center justify-center lg:justify-start bg-white py-1 px-5 rounded-full mb-10 shadow-md transition-transform duration-500 transform hover:scale-105">
+                <img src="asstes/icons/globegroup.svg" alt="Shield Icon" class="w-10 mr-2 -ml-4">
+                <span class="text-sm font-medium text-[#494953]">New Gen, Smart Interactions!</span>
             </div>
-            <h1>Download our App <br> Right Away!</h1>
-            <p style="margin-top: 50px;">Download the app now for quick access to features <br> and seamless navigation
-                anytime!</p>
-            <div class="download-logos">
-                <a href="#"><img src="asstes/icons/appstore.svg" alt=""></a>
-                <a href="#"><img src="asstes/icons/googleplay.svg" alt=""></a>
+    
+            <!-- Main Heading and Description -->
+            <h1 class="text-2xl lg:text-4xl font-extrabold text-[#494953] mb-5">Download our App <br> Right Away!</h1>
+            <p class="mt-12 text-[#9795B5]">Download the app now for quick access to features <br> and seamless navigation anytime!</p>
+            
+            <!-- App Store and Google Play Links for Download -->
+            <div class="w-3/5 py-16 flex flex-col lg:flex-row justify-center items-center gap-6">
+                <a href="#"><img src="asstes/icons/appstore.svg" alt="App Store" class="w-auto"></a>
+                <a href="#"><img src="asstes/icons/googleplay.svg" alt="Google Play" class="w-auto"></a>
             </div>
-            <div class="people-container">
-                <div class="people-imgs">
-                    <img class="z-indexed index1" src="asstes/human logos/first.svg" alt="">
-                    <img class="z-indexed index2" src="asstes/human logos/second.svg" alt="">
-                    <img class="z-indexed index3" src="asstes/human logos/third.svg" alt="">
-                    <img class="z-indexed index4" src="asstes/human logos/fourth.svg" alt="">
-                    <img class="z-indexed index5" src="asstes/human logos/fifth.svg" alt="">
+    
+            <!-- User Testimonials Section with Profile Images -->
+            <div class="w-3/5 flex flex-col lg:flex-row justify-center items-center">
+                <!-- User Profile Images -->
+                <div class="flex -space-x-3">
+                    <img class="w-16 h-16 rounded-full border-1 border-white" src="asstes/human logos/first.svg" alt="">
+                    <img class="w-16 h-16 rounded-full border-1 border-white" src="asstes/human logos/second.svg" alt="">
+                    <img class="w-16 h-16 rounded-full border-1 border-white" src="asstes/human logos/third.svg" alt="">
+                    <img class="w-16 h-16 rounded-full border-1 border-white" src="asstes/human logos/fourth.svg" alt="">
+                    <img class="w-16 h-16 rounded-full border-1 border-white" src="asstes/human logos/fifth.svg" alt="">
                 </div>
-                <div class="people-text">
-                    <p><span class="fifty-k">50k+</span><br><span class="n-downloads">Worldwide Downloads</span></p>
+    
+                <!-- Download Statistics -->
+                <div class="ml-4">
+                    <p class="text-2xl lg:text-3xl text-[#494953]">50k+<br><span class="text-xl text-[#6A7EFC]">Worldwide Downloads</span></p>
                 </div>
             </div>
         </div>
-
-        <div class="download-right">
-            <div class="mockup-container">
-                <img class="dnl-mockup" src="asstes/Download-landing/real-img.svg" alt="">
+    
+        <!-- Right Section: App Mockup Image -->
+        <div class="flex items-center justify-center lg:justify-end mt-5 lg:w-[45%]">
+            <div class="mt-5 lg:w-[300px] xl:w-[400px]">
+                <img class="w-auto" src="asstes/Download-landing/real-img.svg" alt="App Mockup">
             </div>
         </div>
     </section>
+    
+    
+
+    
+    
     
 
     <section class="results-section">
