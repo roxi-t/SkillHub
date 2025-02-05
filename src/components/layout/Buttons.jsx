@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Buttons({ data }) {
   return (
-    <div className="flex gap-4 md:gap-6 items-center">
+    <div className="hidden gap-4 md:gap-6 items-center sm:flex">
       {data ? (
         <>
           <FaSave className="w-[22px] h-[22px] md:w-[28px] md:h-[28px] cursor-pointer" />
@@ -18,7 +18,8 @@ function Buttons({ data }) {
         </>
       ) : (
         <Link
-          className="text-[#FF5656] border border-[#FF5656] rounded-[8px] px-3 py-1 md:px-4 md:py-2 text-sm md:text-base flex items-center justify-center"
+          className="bg-[#FF5656] rounded-[8px] w-[140px] h-[45px] md:w-[179px] md:h-[55px] 
+                     text-white font-yekan font-bold flex items-center justify-center text-sm md:text-base px-4 py-2"
           to="/auth"
         >
           ورود به حساب کاربری

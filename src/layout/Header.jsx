@@ -34,7 +34,7 @@ function Header() {
         <Buttons data={data} />
       </div>
       <Categories />
-      {menuOpen && <HamburgerMenu />}
+      {menuOpen && <HamburgerMenu data={data} />}
       <div className="w-full border bg-[#9795B5] mt-5" />
     </header>
   );
