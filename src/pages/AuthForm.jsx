@@ -4,7 +4,7 @@ import Overlay from "components/login/Overlay";
 import Register from "components/login/Register";
 
 function AuthForm() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   return (
     <div className="flex h-screen items-center justify-center bg-gray-100">

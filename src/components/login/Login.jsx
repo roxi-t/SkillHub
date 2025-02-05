@@ -33,7 +33,7 @@ function Login() {
       );
       if (response) {
         setCookie(response.data);
-        navigate("/");
+        navigate("/explorer");
         refetch();
       }
       if (error) console.log(error.response.data.message);

@@ -8,4 +8,5 @@ export const paths = [
   "services",
   "styles",
   "utils",
+  "layout",
 ];

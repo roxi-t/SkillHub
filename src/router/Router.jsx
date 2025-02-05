@@ -5,6 +5,9 @@ import Contact from "pages/Contact";
 import Download from "pages/Download";
 import { getProfile } from "services/user";
 import { useQuery } from "@tanstack/react-query";
+import Profile from "pages/Profile";
+import Explorer from "pages/Explorer";
+import Layout from "layout/Layout";
 
 function Router() {
   const { data, isLoading, error } = useQuery({
@@ -23,6 +26,26 @@ function Router() {
       <Route path="/auth" element={data ? <Dashboard /> : <AuthForm />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/install" element={<Download />} />
+      <Route
+        path="/profile"
+        element={
+          data ? (
+            <Layout>
+              <Profile />
+            </Layout>
+          ) : (
+            <AuthForm />
+          )
+        }
+      />
+      <Route
+        path="/explorer"
+        element={
+          <Layout>
+            <Explorer />
+          </Layout>
+        }
+      />
     </Routes>
   );
 }
