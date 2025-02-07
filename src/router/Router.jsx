@@ -27,6 +27,14 @@ function Router() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/install" element={<Download />} />
       <Route
+        path="/profile/:name"
+        element={
+          <Layout>
+            <Profile />
+          </Layout>
+        }
+      />
+      <Route
         path="/profile"
         element={
           data ? (

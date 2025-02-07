@@ -1,4 +1,7 @@
+import { VscTerminalCmd } from "react-icons/vsc";
 import Card from "./Card";
+import { IoCubeOutline } from "react-icons/io5";
+import { GrAnnounce } from "react-icons/gr";
 
 function FamousSkills() {
   return (
@@ -12,9 +15,34 @@ function FamousSkills() {
         </p>
       </div>
       <div className="flex flex-wrap gap-4 lg:justify-between justify-center">
-        <Card />
-        <Card />
-        <Card />
+        <Card
+          skill="شی‌گرایی در پایتون"
+          tags={["برنامه نویسی", "پایتون"]}
+          user="امیرمحمد ملازمی"
+          logo={
+            <VscTerminalCmd className="w-[30px] mx-auto h-[30px] text-white" />
+          }
+          job="برنامه‌نویس"
+          name="amir"
+        />
+        <Card
+          skill="طراحی محصول"
+          tags={["طراح محصول", "محصول"]}
+          user="سینا رضایی"
+          logo={
+            <IoCubeOutline className="w-[30px] mx-auto h-[30px] text-white" />
+          }
+          job="طراح محصول"
+          name="sina"
+        />
+        <Card
+          skill="دیجیتال مارکتینگ"
+          tags={["محتوا", "دیجیتال"]}
+          user="علی جانشاهی"
+          logo={<GrAnnounce className="w-[30px] mx-auto h-[30px] text-white" />}
+          job="دیجیتال مارکتر"
+          name="ali"
+        />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import GuideCard from "./GuideCard";
-import ali from "assets/images/ali.png";
-import sina from "assets/images/sina.png";
-import amir from "assets/images/amir.png";
+import ali from "assets/images/ali.jpg";
+import sina from "assets/images/sina.jpg";
+import amir from "assets/images/amir.jpg";
 
 function TopGuiders() {
   return (
