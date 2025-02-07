@@ -1,5 +1,23 @@
+import { useQuery } from "@tanstack/react-query";
+import CompleteProfile from "components/explorer/CompleteProfile";
+import FamousSkills from "components/explorer/FamousSkills";
+import SkillsForYou from "components/explorer/SkillsForYou";
+import TopGuiders from "components/explorer/TopGuiders";
+import { getProfile } from "services/user";
+
 function Explorer() {
-  return <div>Explorer</div>;
+  const { data } = useQuery({
+    queryKey: ["profile"],
+    queryFn: getProfile,
+  });
+  return (
+    <div>
+      {data && <CompleteProfile />}
+      {data && <SkillsForYou />}
+      <FamousSkills />
+      <TopGuiders />
+    </div>
+  );
 }
 
 export default Explorer;
