@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function HamburgerMenu({ data }) {
   return (
-    <div className="sm:hidden mt-4 px-4">
+    <div className="lg:hidden mt-4 px-4">
       <nav className="flex flex-col gap-3 text-[#494953] font-yekan text-base bg-[#EDF2F6] p-4 rounded-lg shadow">
         <div className="flex gap-4 md:gap-6 items-center justify-end">
           {data && (
