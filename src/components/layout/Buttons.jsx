@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Buttons({ data }) {
   return (
-    <div className="hidden gap-4 md:gap-6 items-center sm:flex">
+    <div className="hidden gap-4 md:gap-6 items-center lg:flex">
       {data ? (
         <>
           <FaSave className="w-[22px] h-[22px] md:w-[28px] md:h-[28px] cursor-pointer" />
