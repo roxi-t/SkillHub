@@ -10,11 +10,11 @@ function FavouriteSection() {
           متمایل به یادگیری
         </h1>
       </div>
-      <div className="grid-cols-2 grid gap-10 mt-8">
+      <div className="gap-10 mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 w-full">
         <SkillCard />
         <SkillCard />
         <SkillCard />
-        <div className="bg-[#EDF2F6] p-4 flex flex-col items-center text-center w-[283px] h-[152px] rounded-[10px]">
+        <div className="bg-[#EDF2F6] p-4 flex flex-col items-center text-center w-[283px] h-[152px] rounded-[10px] mx-auto">
           <h1 className="font-yekan font-semibold  text-[#494953] text-[17px]">
             مهارت دیگری برای علی جانشاهی پیشنهاد دارید؟
           </h1>

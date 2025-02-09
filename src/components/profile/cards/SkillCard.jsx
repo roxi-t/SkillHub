@@ -2,7 +2,7 @@ import { VscTerminalCmd } from "react-icons/vsc";
 
 function SkillCard() {
   return (
-    <div className="bg-[#EDF2F6] p-2 w-[283px] h-[152px] rounded-[10px]">
+    <div className="bg-[#EDF2F6] p-2 xl:w-[283px] xl:h-[152px] rounded-[10px] mx-auto">
       <div className="flex gap-6 items-center mb-6">
         <div className="flex items-center w-[75px] h-[75px] bg-[#6A7EFC] rounded-md">
           <VscTerminalCmd className="w-[30px] mx-auto h-[30px] text-white" />

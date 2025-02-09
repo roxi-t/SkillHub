@@ -1,10 +1,10 @@
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowDown, FaArrowRight, FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import ali from "assets/images/ali.jpg";
 
 function SwapCard({ skill, opponentName, opponentPic, opponentSkill }) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center sm:flex-row flex-col">
       <div className="flex w-[290px] h-[50px] bg-[#EDF2F6] rounded-[5px]">
         <div className="flex items-center gap-4 mx-4">
           <img
@@ -17,9 +17,13 @@ function SwapCard({ skill, opponentName, opponentPic, opponentSkill }) {
           </p>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex-col sm:flex hidden">
         <FaArrowLeft className="text-[#615EFC]" />
         <FaArrowRight className="text-[#615EFC]" />
+      </div>
+      <div className="flex sm:hidden">
+        <FaArrowUp className="text-[#615EFC]" />
+        <FaArrowDown className="text-[#615EFC]" />
       </div>
       <div className="flex items-center w-[290px] h-[50px] bg-[#EDF2F6] rounded-[5px]">
         <div className="flex items-center gap-2 mx-4">

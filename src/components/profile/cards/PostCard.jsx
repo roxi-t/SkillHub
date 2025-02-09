@@ -18,7 +18,7 @@ function PostCard({ src, name, tags, time, view, comment }) {
         <div className="flex items-center w-[85px] h-[85px] bg-[#6A7EFC] rounded-md" />
       )}
       <div className="flex flex-col gap-1">
-        <h1 className="text-[14px] font-yekan ">
+        <h1 className="sm:text-[14px] font-yekan text-[12px] font-bold sm:font-normal">
           مهارت‌هایی که در 2025 به آنها نیاز پیدا خواهید کرد!
         </h1>
         <div className="flex gap-4">
@@ -31,7 +31,7 @@ function PostCard({ src, name, tags, time, view, comment }) {
             </p>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="flex sm:gap-4 gap-2">
           <div className="flex items-center gap-1">
             <FaRegUser className="text-[#494953] w-[13px] h-[13px]" />
             <p className="text-[11px] font-yekan text-[#494953] font-extralight">

@@ -9,7 +9,7 @@ function About() {
   const [activeTab, setActiveTab] = useState("درباره");
 
   return (
-    <div className="flex flex-col items-center w-full gap-12 p-6 my-5 mt-6">
+    <div className="flex flex-col items-center xl:w-[60%] gap-12 p-6 my-5 mt-6">
       <div>
         <div className="flex justify-between">
           <h1 className="text-[24px] font-yekan text-[#494953] font-semibold">
@@ -19,7 +19,7 @@ function About() {
             دیدن همه
           </p>
         </div>
-        <div className="grid-cols-2 grid gap-12 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-2 grid-auto-flow-row gap-6 mt-6 w-full">
           <SkillCard />
           <SkillCard />
           <SkillCard />
@@ -27,7 +27,7 @@ function About() {
         </div>
       </div>
       <div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-6 w-full">
           {["درباره", "علاقه‌مندی‌ها", "مبادله‌ها", "پست‌ها"].map((tab) => (
             <button
               key={tab}

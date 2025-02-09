@@ -8,8 +8,8 @@ import { HiLightBulb } from "react-icons/hi";
 
 function AboutSection() {
   return (
-    <div className="flex gap-10">
-      <div className="w-[50%]">
+    <div className="flex gap-10 flex-col sm:flex-row mx-2">
+      <div className="sm:w-[50%] w-full">
         <div className="flex items-center gap-1">
           <IoMdBook className="w-[20px] h-[20px]" />
           <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
@@ -29,8 +29,8 @@ function AboutSection() {
           سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
         </p>
       </div>
-      <div className="flex flex-col gap-12 w-[50%]">
-        <div>
+      <div className="flex flex-col gap-12 sm:w-[50%] w-full">
+        <div className="mx-auto">
           <div className="flex items-center gap-1">
             <FaRegStar className="w-[20px] h-[20px]" />
             <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
@@ -46,7 +46,7 @@ function AboutSection() {
             icon={<HiLightBulb className="text-white w-[15px] h-[15px]" />}
           />
         </div>
-        <div>
+        <div className="mx-auto">
           <div className="flex items-center gap-1">
             <IoSchoolOutline className="w-[20px] h-[20px]" />
             <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">

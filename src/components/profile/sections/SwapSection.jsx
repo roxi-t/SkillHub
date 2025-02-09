@@ -13,7 +13,7 @@ function SwapSection() {
           مبادله‌شده با دیگران
         </h1>
       </div>
-      <div className="flex flex-col gap-4 mt-8">
+      <div className="flex flex-col sm:gap-4 gap-8 mt-8">
         <SwapCard
           opponentName="ناصر محمودی"
           skill="دیجیتال مارکتینگ"
