@@ -5,7 +5,7 @@ function SuggestPost() {
   return (
     <div className="bg-[#EDF2F6] flex flex-col gap-2 p-1 w-[245px] h-[97px] rounded-[10px]">
       <div className="flex gap-3 items-center">
-        <div className="w-[60px] h-[60px] bg-[#6A7EFC] rounded-[5px]"></div>
+        <div className="w-[60px] h-[60px] bg-[#6A7EFC] rounded-[5px] flex-shrink-0"></div>
         <p className="text-[14px] text-[#494953] font-yekan ">
           مهارت‌هایی که در 2025 به آنها نیاز پیدا خواهید کرد!
         </p>

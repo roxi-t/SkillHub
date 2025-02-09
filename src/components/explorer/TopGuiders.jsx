@@ -15,9 +15,24 @@ function TopGuiders() {
         </p>
       </div>
       <div className="flex flex-wrap gap-4 lg:justify-between justify-center">
-        <GuideCard name="علی جانشاهی" skill="دیجیتال مارکتر" image={ali} />
-        <GuideCard name="سینا رضایی" skill="طراح محصول" image={sina} />
-        <GuideCard name="امیرمحمد ملازمی" skill="برنامه نویس" image={amir} />
+        <GuideCard
+          name="علی جانشاهی"
+          skill="دیجیتال مارکتر"
+          image={ali}
+          user="ali"
+        />
+        <GuideCard
+          name="سینا رضایی"
+          skill="طراح محصول"
+          image={sina}
+          user="sina"
+        />
+        <GuideCard
+          name="امیرمحمد ملازمی"
+          skill="برنامه نویس"
+          image={amir}
+          user="amir"
+        />
       </div>
     </div>
   );

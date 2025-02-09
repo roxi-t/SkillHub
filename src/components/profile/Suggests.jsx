@@ -1,11 +1,11 @@
 import naser from "assets/images/naser.jpg";
 import amirali from "assets/images/amirali.jpg";
 import mohammad from "assets/images/mohammad.jpg";
-import SuggestGuiders from "./SuggestGuiders";
-import SuggestPost from "./SuggestPost";
+import SuggestGuiders from "./suggests/SuggestGuiders";
+import SuggestPost from "./suggests/SuggestPost";
 function Suggests() {
   return (
-    <div className="flex my-5 flex-col gap-8 mt-6">
+    <div className="flex my-5 flex-col gap-8 mt-6 p-6 w-[20%]">
       <div className="flex flex-col gap-4">
         <h1 className="text-[#494953] mb-1 text-[24px] font-yekan font-semibold">
           راهنمایان مشابه
@@ -32,7 +32,7 @@ function Suggests() {
             دیدن همه
           </p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center">
           <SuggestPost />
           <SuggestPost />
           <SuggestPost />

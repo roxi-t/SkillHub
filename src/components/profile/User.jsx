@@ -6,7 +6,7 @@ import { TbDeviceAnalytics } from "react-icons/tb";
 
 function User() {
   return (
-    <div className="flex my-5 flex-col items-center mt-6">
+    <div className="flex my-5 flex-col items-center mt-6 w-[20%] p-6">
       <img
         src={amirali}
         alt="profile"
