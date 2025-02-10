@@ -4,7 +4,7 @@ import { links } from "constants/links";
 import logo from "assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const MainHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -71,4 +71,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;

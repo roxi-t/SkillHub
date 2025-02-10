@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Dashboard from "pages/Dashboard";
 import AuthForm from "pages/AuthForm";
 import Contact from "pages/Contact";
@@ -9,12 +9,14 @@ import Profile from "pages/Profile";
 import Explorer from "pages/Explorer";
 import Layout from "layout/Layout";
 import Loader from "components/loader/Loader";
+import MainLayout from "layout/MainLayout";
 
 function Router() {
   const { data, isLoading, error } = useQuery({
     queryKey: ["profile"],
     queryFn: getProfile,
   });
+  const navigate = useNavigate();
 
   if (isLoading) return <Loader />;
   if (error) return <h1>error ...</h1>;
@@ -22,11 +24,50 @@ function Router() {
 
   return (
     <Routes>
-      <Route index element={<Dashboard />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/auth" element={data ? <Dashboard /> : <AuthForm />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/install" element={<Download />} />
+      <Route
+        index
+        element={
+          <MainLayout>
+            <Dashboard />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/dashboard"
+        element={
+          <MainLayout>
+            <Dashboard />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/auth"
+        element={
+          data ? (
+            <MainLayout>
+              <Dashboard />
+            </MainLayout>
+          ) : (
+            <AuthForm />
+          )
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <MainLayout>
+            <Contact />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/download"
+        element={
+          <MainLayout>
+            <Download />
+          </MainLayout>
+        }
+      />
       <Route
         path="/profile/:name"
         element={
