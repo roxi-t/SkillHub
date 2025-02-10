@@ -34,7 +34,7 @@ const Header = () => {
                   : null
               } ${
                 link.isRed
-                  ? "px-6 py-3 ml-3 text-lg rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d]"
+                  ? "px-6 py-3 ml-3 text-lg rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d] hover:text-white"
                   : null
               }`}
             >
@@ -57,7 +57,7 @@ const Header = () => {
                     : null
                 } ${
                   link.isRed
-                    ? "w-full px-6 py-3 text-sm rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d]"
+                    ? "w-full px-6 py-3 text-sm rounded-full bg-[#FF5656] text-white transition-all duration-300 hover:bg-[#e13b3d] hover:text-white"
                     : null
                 }`}
               >
