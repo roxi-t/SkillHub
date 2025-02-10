@@ -1,8 +1,4 @@
 import { useState } from "react";
-import PostSection from "./sections/PostSection";
-import SwapSection from "./sections/SwapSection";
-import AboutSection from "./sections/AboutSection";
-import FavouriteSection from "./sections/FavouriteSection";
 import LikeToLearn from "./about/LikeToLearn";
 import Posts from "./about/Posts";
 import SectionsButtons from "./about/SectionsButtons";

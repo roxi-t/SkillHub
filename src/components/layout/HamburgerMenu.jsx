@@ -23,15 +23,15 @@ function HamburgerMenu({ data }) {
             </>
           )}
         </div>
-        <span className="flex items-center gap-2 cursor-pointer">
+        <Link to="/explorer" className="flex items-center gap-2 cursor-pointer">
           <GiHamburgerMenu className="w-5 h-5" /> دسته‌بندی مهارت‌ها
-        </span>
-        <span className="flex items-center gap-2 cursor-pointer">
+        </Link>
+        <Link to="/explorer" className="flex items-center gap-2 cursor-pointer">
           <MdOutlineLocalFireDepartment className="w-5 h-5" /> مهارت‌های محبوب
-        </span>
-        <span className="flex items-center gap-2 cursor-pointer">
+        </Link>
+        <Link to="/explorer" className="flex items-center gap-2 cursor-pointer">
           <CgProfile className="w-5 h-5" /> راهنمایان برتر
-        </span>
+        </Link>
         <span>راهنما شوید!</span>
 
         {!data && (

@@ -22,7 +22,7 @@ function SectionsButtons({ setActiveTab, activeTab }) {
           </button>
         ))}
       </div>
-      <div className="w-full border-red-400 border">
+      <div className="w-full">
         {activeTab === "درباره" && <AboutSection />}
         {activeTab === "علاقه‌مندی‌ها" && <FavouriteSection />}
         {activeTab === "مبادله‌ها" && <SwapSection />}

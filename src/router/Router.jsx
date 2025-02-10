@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import Profile from "pages/Profile";
 import Explorer from "pages/Explorer";
 import Layout from "layout/Layout";
+import Loader from "components/loader/Loader";
 
 function Router() {
   const { data, isLoading, error } = useQuery({
@@ -15,7 +16,7 @@ function Router() {
     queryFn: getProfile,
   });
 
-  if (isLoading) return <h1>loading ...</h1>;
+  if (isLoading) return <Loader />;
   if (error) return <h1>error ...</h1>;
   if (data) console.log(data);
 

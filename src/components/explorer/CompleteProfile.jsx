@@ -8,7 +8,7 @@ function CompleteProfile() {
           <h3 className="font-yekan text-[18px] sm:text-[20px] text-[#494953]">
             شما {75}% پروفایل خود را تکمیل کرده‌اید.
           </h3>
-          <div className="w-[400px] h-[6px] bg-[#D9D9D9] rounded-[10px] mx-auto md:mx-0 mt-2">
+          <div className="w-full h-[6px] bg-[#D9D9D9] rounded-[10px] mx-auto md:mx-0 mt-2">
             <div
               className="h-full bg-[#615EFC] rounded-[10px]"
               style={{ width: "75%" }}
