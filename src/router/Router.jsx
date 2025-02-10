@@ -30,7 +30,7 @@ function Router() {
         path="/profile/:name"
         element={
           <Layout>
-            <Profile />
+            <Profile isMyself={false} />
           </Layout>
         }
       />
@@ -39,7 +39,7 @@ function Router() {
         element={
           data ? (
             <Layout>
-              <Profile />
+              <Profile data={data.data} isMyself={true} />
             </Layout>
           ) : (
             <AuthForm />

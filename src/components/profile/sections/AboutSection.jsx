@@ -8,11 +8,11 @@ import { HiLightBulb } from "react-icons/hi";
 
 function AboutSection() {
   return (
-    <div className="flex gap-10 flex-col sm:flex-row mx-2">
-      <div className="sm:w-[50%] w-full">
+    <div className="flex flex-col sm:flex-row gap-4 mx-2">
+      <div className="w-full sm:max-w-[50%] flex flex-col">
         <div className="flex items-center gap-1">
           <IoMdBook className="w-[20px] h-[20px]" />
-          <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
+          <h1 className="text-[18px] font-yekan font-medium text-[#494953]">
             درباره‌ی علی جانشاهی
           </h1>
         </div>
@@ -29,11 +29,11 @@ function AboutSection() {
           سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
         </p>
       </div>
-      <div className="flex flex-col gap-12 sm:w-[50%] w-full">
-        <div className="mx-auto">
+      <div className="flex flex-col gap-12 w-full sm:max-w-[50%]">
+        <div className="mx-auto w-full">
           <div className="flex items-center gap-1">
             <FaRegStar className="w-[20px] h-[20px]" />
-            <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
+            <h1 className="text-[18px] font-yekan font-medium text-[#494953]">
               تجربه‌ها
             </h1>
           </div>
@@ -46,10 +46,10 @@ function AboutSection() {
             icon={<HiLightBulb className="text-white w-[15px] h-[15px]" />}
           />
         </div>
-        <div className="mx-auto">
+        <div className="mx-auto w-full">
           <div className="flex items-center gap-1">
             <IoSchoolOutline className="w-[20px] h-[20px]" />
-            <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
+            <h1 className="text-[18px] font-yekan font-medium text-[#494953]">
               گواهی‌ها
             </h1>
           </div>

@@ -7,13 +7,13 @@ import mohammad from "assets/images/mohammad.jpg";
 function SwapSection() {
   return (
     <div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 mt-5">
         <LuRefreshCw className="w-[20px] h-[20px]" />
         <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
           مبادله‌شده با دیگران
         </h1>
       </div>
-      <div className="flex flex-col sm:gap-4 gap-8 mt-8">
+      <div className="flex flex-col w-full sm:gap-4 gap-8 mt-8">
         <SwapCard
           opponentName="ناصر محمودی"
           skill="دیجیتال مارکتینگ"

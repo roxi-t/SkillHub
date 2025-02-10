@@ -4,8 +4,8 @@ import ali from "assets/images/ali.jpg";
 
 function PostSection() {
   return (
-    <div>
-      <div className="flex items-center gap-1">
+    <div className="w-full">
+      <div className="flex items-center gap-1 mt-5">
         <AiOutlinePicture className="w-[20px] h-[20px]" />
         <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
           مبادله‌شده با دیگران

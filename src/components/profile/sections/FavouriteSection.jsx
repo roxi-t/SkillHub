@@ -4,7 +4,7 @@ import SkillCard from "../cards/SkillCard";
 function FavouriteSection() {
   return (
     <div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 mt-5">
         <CiHeart className="w-[20px] h-[20px]" />
         <h1 className="text-[18px] font-yekan font-medium text-[#494953] ">
           متمایل به یادگیری
