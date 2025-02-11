@@ -16,7 +16,7 @@ function AppDemoSection() {
         تماشا کنید تا ببینید چطور تعویض مهارت‌ها به راحتی انجام می‌شود.
       </p>
 
-      <div className="flex flex-col sm:flex-row gap-5 justify-center">
+      <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
         <div className="w-full sm:w-1/2 md:w-1/4 max-w-xs md:max-w-none">
           <img
             src={present5demo}
