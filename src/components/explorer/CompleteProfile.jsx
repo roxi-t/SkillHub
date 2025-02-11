@@ -1,17 +1,31 @@
 import { Link } from "react-router-dom";
 
-function CompleteProfile() {
+function CompleteProfile({ data }) {
+  const profileFields = [
+    data?.user_profile_title,
+    data?.Avatar,
+    data?.skills,
+    data?.favourite_skills,
+    data?.bio,
+    data?.posts,
+  ];
+
+  const filledFields = profileFields.filter(Boolean).length;
+  const completionPercentage = Math.round(
+    (filledFields / profileFields.length) * 100
+  );
+
   return (
     <div className="px-4 md:px-10">
       <div className="w-full px-4 md:px-6 flex flex-col md:flex-row justify-between items-center mt-8 bg-[#EDF2F6] rounded-md py-4 gap-3">
         <div className="flex flex-col w-full md:w-auto text-center md:text-right">
           <h3 className="font-yekan text-[18px] sm:text-[20px] text-[#494953]">
-            شما {75}% پروفایل خود را تکمیل کرده‌اید.
+            شما {completionPercentage}% پروفایل خود را تکمیل کرده‌اید.
           </h3>
           <div className="w-full h-[6px] bg-[#D9D9D9] rounded-[10px] mx-auto md:mx-0 mt-2">
             <div
               className="h-full bg-[#615EFC] rounded-[10px]"
-              style={{ width: "75%" }}
+              style={{ width: `${completionPercentage}%` }}
             ></div>
           </div>
         </div>

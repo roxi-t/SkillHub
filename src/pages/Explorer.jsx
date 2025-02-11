@@ -12,7 +12,7 @@ function Explorer() {
   });
   return (
     <div>
-      {data && <CompleteProfile />}
+      {data && <CompleteProfile data={data.data} />}
       {data && <SkillsForYou />}
       <FamousSkills />
       <TopGuiders />

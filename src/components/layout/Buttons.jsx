@@ -13,7 +13,7 @@ function Buttons({ data }) {
           <img
             src={data.data.Avatar ? data.data.Avatar : anonymous}
             alt="Profile"
-            className="w-[36px] h-[36px] md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
+            className="w-[36px] h-[36px] object-cover md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
           />
         </>
       ) : (

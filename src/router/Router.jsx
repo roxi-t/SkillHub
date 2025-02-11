@@ -19,7 +19,6 @@ function Router() {
 
   if (isLoading) return <Loader />;
   if (error) return <h1>error ...</h1>;
-  if (data) console.log(data);
 
   return (
     <Routes>
