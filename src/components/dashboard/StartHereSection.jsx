@@ -8,7 +8,7 @@ function StartHereSection() {
           امروز حساب خود را ایجاد کنید و به‌صورت رایگان شروع کنید!
         </h2>
         <Link
-          href="/auth"
+          to="/auth"
           className="cta-button bg-[#615EFC] text-white px-6 md:px-8 py-3 rounded-full font-bold transition-all duration-300 hover:bg-[#4c4ae8] shadow-md hover:shadow-lg"
         >
           دریافت اپلیکیشن

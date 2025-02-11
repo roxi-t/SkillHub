@@ -1,5 +1,6 @@
 import qrIOS from "assets/images/Group 39508.svg";
 import qrAndroid from "assets/images/Group 39511.svg";
+import { Link } from "react-router-dom";
 
 const DownloadCards = () => {
   return (
@@ -24,12 +25,12 @@ const DownloadCards = () => {
             {card.title}
           </h3>
           <p className="text-blue-500 text-sm mb-4">{card.version}</p>
-          <a
-            href="#"
+          <Link
+            to="#"
             className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full font-bold inline-block mb-4"
           >
             دانلود
-          </a>
+          </Link>
           <img
             src={card.qr}
             alt={`QR Code for ${card.title}`}
