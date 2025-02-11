@@ -6,15 +6,17 @@ import User3 from "assets/images/third.svg";
 import User4 from "assets/images/fourth.svg";
 import User5 from "assets/images/fifth.svg";
 import MockupImage from "assets/images/real-img.svg";
-import globeGroup from "assets/images/globegroup.svg";
 import { Link } from "react-router-dom";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 const DownloadSection = () => {
   return (
     <section className="flex flex-col lg:flex-row gap-8 pb-8 lg:p-16  font-yekan justify-between">
       <div className="pt-10 p-6 lg:w-full text-center lg:text-right">
         <div className="flex w-fit mx-auto lg:mx-0 gap-2 items-center bg-white py-1 px-3 rounded-full mb-10 shadow-md transition-transform transform hover:scale-105">
-          <img src={globeGroup} alt="Globe Icon" className="w-10" />
+          <div className="flex justify-center items-center rounded-full bg-[#EDF2F6] p-1">
+            <AiOutlineGlobal className="w-8 h-8 text-[#6A7EFC]" />
+          </div>
           <span className="text-sm font-medium text-[#494953]">
             نسل جدید، تعاملات هوشمند!
           </span>
