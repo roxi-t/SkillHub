@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from "pages/Dashboard";
 import AuthForm from "pages/AuthForm";
 import Contact from "pages/Contact";
@@ -16,7 +16,6 @@ function Router() {
     queryKey: ["profile"],
     queryFn: getProfile,
   });
-  const navigate = useNavigate();
 
   if (isLoading) return <Loader />;
   if (error) return <h1>error ...</h1>;
@@ -27,7 +26,7 @@ function Router() {
       <Route
         index
         element={
-          <MainLayout>
+          <MainLayout isLogin={data ? true : false}>
             <Dashboard />
           </MainLayout>
         }
@@ -35,7 +34,7 @@ function Router() {
       <Route
         path="/dashboard"
         element={
-          <MainLayout>
+          <MainLayout isLogin={data ? true : false}>
             <Dashboard />
           </MainLayout>
         }
@@ -44,7 +43,7 @@ function Router() {
         path="/auth"
         element={
           data ? (
-            <MainLayout>
+            <MainLayout isLogin={data ? true : false}>
               <Dashboard />
             </MainLayout>
           ) : (
@@ -55,7 +54,7 @@ function Router() {
       <Route
         path="/contact"
         element={
-          <MainLayout>
+          <MainLayout isLogin={data ? true : false}>
             <Contact />
           </MainLayout>
         }
@@ -63,7 +62,7 @@ function Router() {
       <Route
         path="/download"
         element={
-          <MainLayout>
+          <MainLayout isLogin={data ? true : false}>
             <Download />
           </MainLayout>
         }

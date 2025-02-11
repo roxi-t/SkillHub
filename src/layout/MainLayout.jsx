@@ -1,10 +1,10 @@
 import Footer from "./Footer";
 import MainHeader from "./MainHeader";
 
-function MainLayout({ children }) {
+function MainLayout({ children, isLogin }) {
   return (
     <>
-      <MainHeader />
+      <MainHeader isLogin={isLogin} />
       <main>{children}</main>
       <Footer />
     </>

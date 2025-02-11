@@ -4,7 +4,7 @@ import { links } from "constants/links";
 import logo from "assets/images/logo.png";
 import { Link } from "react-router-dom";
 
-const MainHeader = () => {
+const MainHeader = ({ isLogin }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -27,7 +27,9 @@ const MainHeader = () => {
           return (
             <Link
               key={link.route}
-              to={link.route}
+              to={
+                link.isBlue ? (isLogin ? "/explorer" : link.route) : link.route
+              }
               className={`text-[#494953] text-lg transition-colors duration-300 hover:text-[#6A7EFC] ${
                 link.isBlue
                   ? "px-6 py-3 text-lg rounded-full border border-[#7161ef] text-[#494953] transition-all duration-300 hover:bg-[#6A7EFC] hover:text-white"
@@ -49,7 +51,13 @@ const MainHeader = () => {
             return (
               <Link
                 key={link.route}
-                to={link.route}
+                to={
+                  link.isBlue
+                    ? isLogin
+                      ? "/explorer"
+                      : link.route
+                    : link.route
+                }
                 onClick={() => setMenuOpen(false)}
                 className={`text-[#494953] text-lg transition-colors font-yekan duration-300 hover:text-[#6A7EFC] ${
                   link.isBlue
