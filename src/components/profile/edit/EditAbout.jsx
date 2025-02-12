@@ -4,8 +4,8 @@ import { VscChromeClose } from "react-icons/vsc";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { editProfile } from "services/profile";
 
-function EditAbout({ setIsEditAbout }) {
-  const [about, setAbout] = useState("");
+function EditAbout({ setIsEditAbout, about }) {
+  const [bio, setBio] = useState(about || "");
 
   const { mutate, isPending, isError } = useMutation({
     mutationFn: editProfile,
@@ -15,7 +15,7 @@ function EditAbout({ setIsEditAbout }) {
 
   const handleSubmit = () => {
     mutate(
-      { about },
+      { bio },
       {
         onSuccess: () => {
           setIsEditAbout(false);
@@ -39,8 +39,8 @@ function EditAbout({ setIsEditAbout }) {
       <div>
         <textarea
           className="w-full h-[220px] bg-[#EDF2F6] resize-none outline-none rounded-[5px] p-2 font-yekan"
-          value={about}
-          onChange={(e) => setAbout(e.target.value)}
+          value={bio}
+          onChange={(e) => setBio(e.target.value)}
           disabled={isPending}
         ></textarea>
       </div>

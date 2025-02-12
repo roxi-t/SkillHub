@@ -1,18 +1,22 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import InputField from "./InputField";
 import { validations } from "utils/validation";
 import { authRegister } from "services/auth";
+import { useMutation } from "@tanstack/react-query";
+import Loading from "react-loading";
+import toastMaker from "utils/toastMaker";
 
 function Register() {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
   const [errors, setErrors] = useState({});
+
+  const { mutate, isPending } = useMutation({ mutationFn: authRegister });
 
   const icons = [
     { Icon: FaGithub, link: "#" },
@@ -28,22 +32,29 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     const validationErrors = await validations(formData);
-    if (Object.keys(validationErrors).length > 0) setErrors(validationErrors);
-    else {
-      const { response, error } = await authRegister(
-        formData.username,
-        formData.email,
-        formData.password
-      );
-      if (response) {
-        setFormData({
-          username: "",
-          email: "",
-          password: "",
-        });
-      }
-      if (error) console.log(error.response.data.message);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
     }
+
+    mutate(formData, {
+      onSuccess: ({ response }) => {
+        if (response) {
+          toastMaker("success", "ثبت نام موفقیت‌آمیز بود!");
+          setFormData({
+            username: "",
+            email: "",
+            password: "",
+          });
+        }
+      },
+      onError: (error) => {
+        toastMaker(
+          "error",
+          error.response?.data?.message || "خطایی رخ داده است"
+        );
+      },
+    });
   };
 
   return (
@@ -54,7 +65,7 @@ function Register() {
       <h1 className="text-2xl font-bold text-gray-700 font-yekan">
         ساخت اکانت
       </h1>
-      <div className="flex justify-center space-x-4 my-4">
+      <div className="flex justify-center gap-2 my-4">
         {icons.map(({ Icon, link }, index) => (
           <Link
             key={index}
@@ -87,11 +98,17 @@ function Register() {
         error={errors.password}
       />
       <button
-        onClick={handleRegister}
         type="submit"
-        className="mt-4 font-yekan hover:border-red-500 border border-1 transition-all duration-300 hover:text-red-500 hover:bg-white bg-red-500 text-white text-sm cursor-pointer font-semibold py-3 px-8 rounded-full"
+        disabled={isPending}
+        className="mt-4 hover:border-red-500 border border-1 transition-all duration-300 bg-red-500 cursor-pointer hover:text-red-500 text-white text-sm font-semibold py-3 px-8 rounded-full hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
-        ثبت نام
+        <span>
+          {isPending ? (
+            <Loading type="spin" color="#fff" height={16} width={16} />
+          ) : (
+            "ثبت نام"
+          )}
+        </span>
       </button>
     </form>
   );

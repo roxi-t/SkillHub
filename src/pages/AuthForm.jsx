@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Login from "components/login/Login";
-import Overlay from "components/login/Overlay";
-import Register from "components/login/Register";
+import Login from "components/auth/Login";
+import Overlay from "components/auth/Overlay";
+import Register from "components/auth/Register";
 
 function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);

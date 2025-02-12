@@ -10,7 +10,7 @@ function About({ isMyself, data, isEditAbout, setIsEditAbout }) {
   return (
     <div className="flex flex-col items-center xl:w-[60%] gap-3 p-6 my-5 mt-6">
       {isEditAbout && isMyself ? (
-        <EditAbout setIsEditAbout={setIsEditAbout}/>
+        <EditAbout setIsEditAbout={setIsEditAbout} about={data.bio} />
       ) : (
         <>
           <UserSkills data={data} isMyself={isMyself} />

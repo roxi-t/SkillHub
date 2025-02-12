@@ -5,17 +5,18 @@ import InputField from "./InputField";
 import { validations } from "utils/validation";
 import { authLogin } from "services/auth";
 import { setCookie } from "utils/cookie";
-import { getProfile } from "services/user";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import Loading from "react-loading";
+import toastMaker from "utils/toastMaker";
 
 function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({});
-  const { refetch } = useQuery({
-    queryKey: ["profile"],
-    queryFn: getProfile,
-  });
+
+  const { mutate, isPending } = useMutation({ mutationFn: authLogin });
+
+  const queryClient = useQueryClient();
 
   const handleInputChange = (field) => (e) => {
     setFormData({ ...formData, [field]: e.target.value });
@@ -25,19 +26,26 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const validationErrors = await validations(formData);
-    if (Object.keys(validationErrors).length > 0) setErrors(validationErrors);
-    else {
-      const { response, error } = await authLogin(
-        formData.username,
-        formData.password
-      );
-      if (response) {
-        setCookie(response.data);
-        navigate("/explorer");
-        refetch();
-      }
-      if (error) console.log(error.response.data.message);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
     }
+
+    mutate(formData, {
+      onSuccess: ({ response }) => {
+        if (response) {
+          setCookie(response.data);
+          queryClient.invalidateQueries({ queryKey: ["profile"] });
+          navigate("/explorer");
+        }
+      },
+      onError: (error) => {
+        toastMaker(
+          "error",
+          error.response?.data?.message || "مشکلی در ورود به سیستم وجود دارد"
+        );
+      },
+    });
   };
 
   return (
@@ -87,11 +95,17 @@ function Login() {
         گذرواژه خود را فراموش کرده‌اید؟
       </Link>
       <button
-        onClick={handleLogin}
         type="submit"
-        className="mt-4 hover:border-red-500 border border-1 transition-all duration-300 bg-red-500 cursor-pointer hover:text-red-500 text-white text-sm font-semibold py-3 px-8 rounded-full hover:bg-white"
+        disabled={isPending}
+        className="mt-4 hover:border-red-500 border border-1 transition-all duration-300 bg-red-500 cursor-pointer hover:text-red-500 text-white text-sm font-semibold py-3 px-8 rounded-full hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
-        ورود
+        <span>
+          {isPending ? (
+            <Loading type="spin" color="#fff" height={16} width={16} />
+          ) : (
+            "ورود"
+          )}
+        </span>
       </button>
     </form>
   );
