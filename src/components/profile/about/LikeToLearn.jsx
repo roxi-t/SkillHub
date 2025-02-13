@@ -2,7 +2,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import AddSkillCard from "../cards/AddSkillCard";
 import SkillCard from "../cards/SkillCard";
 
-function LikeToLearn({ data }) {
+function LikeToLearn({ data, setIsAddOpen, setIsNormalSkill }) {
   return (
     <div>
       <div className="bg-[#9795B5] w-full border mb-6 mt-6"></div>
@@ -17,7 +17,11 @@ function LikeToLearn({ data }) {
           data.favorite_skills
             .slice(0, 3)
             .map((item) => <SkillCard key={item.id} />)}
-        <AddSkillCard />
+        <AddSkillCard
+          setIsAddOpen={setIsAddOpen}
+          isNormal={false}
+          setIsNormalSkill={setIsNormalSkill}
+        />
       </div>
     </div>
   );

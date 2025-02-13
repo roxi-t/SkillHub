@@ -4,8 +4,9 @@ import SkillCard from "../cards/SkillCard";
 import { IoColorPaletteSharp, IoHardwareChipSharp } from "react-icons/io5";
 import { MdOutlineWeb } from "react-icons/md";
 
-function UserSkills({ isMyself, data }) {
+function UserSkills({ isMyself, data, setIsAddOpen, setIsNormalSkill }) {
   const { job, icon: Icon } = useUserFromParams();
+
   return (
     <div>
       <div className="flex justify-between">
@@ -24,8 +25,12 @@ function UserSkills({ isMyself, data }) {
             {data.skills &&
               data.skills
                 .slice(0, 3)
-                .map((item) => <SkillCard key={item.id} />)}
-            <AddSkillCard />
+                .map((item) => <SkillCard key={item.id} skill="dsd" />)}
+            <AddSkillCard
+              isNormal={true}
+              setIsAddOpen={setIsAddOpen}
+              setIsNormalSkill={setIsNormalSkill}
+            />
           </>
         ) : (
           <>
