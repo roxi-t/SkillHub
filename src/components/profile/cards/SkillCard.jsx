@@ -1,4 +1,4 @@
-function SkillCard({ skill, icon, tags }) {
+function SkillCard({ skill, icon, tags, description }) {
   return (
     <div className="bg-[#EDF2F6] p-2 xl:w-[283px] xl:h-[152px] rounded-[10px] mx-auto">
       <div className="flex gap-6 items-center mb-6">
@@ -19,6 +19,11 @@ function SkillCard({ skill, icon, tags }) {
                   #{tag}
                 </p>
               ))}
+            {description && (
+              <p className="font-yekan text-[#9795B5] text-[14px] sm:text-[15px] max-w-40">
+                {description}
+              </p>
+            )}
           </div>
         </div>
       </div>

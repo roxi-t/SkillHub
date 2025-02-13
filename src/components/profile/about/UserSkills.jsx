@@ -22,10 +22,17 @@ function UserSkills({ isMyself, data, setIsAddOpen, setIsNormalSkill }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 grid-auto-flow-row gap-6 mt-6 w-full">
         {isMyself ? (
           <>
-            {data.skills &&
-              data.skills
+            {data.user_skills &&
+              data.user_skills
                 .slice(0, 3)
-                .map((item) => <SkillCard key={item.id} skill="dsd" />)}
+                .map((item) => (
+                  <SkillCard
+                    key={item.id}
+                    skill={item.title}
+                    icon={<img src={item.logo} className="" />}
+                    description={item.description}
+                  />
+                ))}
             <AddSkillCard
               isNormal={true}
               setIsAddOpen={setIsAddOpen}
@@ -34,10 +41,6 @@ function UserSkills({ isMyself, data, setIsAddOpen, setIsNormalSkill }) {
           </>
         ) : (
           <>
-            {/* {data.skills &&
-                data.skills
-                  .slice(0, 4)
-                  .map((item) => <SkillCard key={item.id} />)} */}
             <SkillCard
               skill={job}
               tags={["2025", "مهارت"]}

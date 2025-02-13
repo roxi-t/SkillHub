@@ -16,7 +16,14 @@ function LikeToLearn({ data, setIsAddOpen, setIsNormalSkill }) {
         {data.favorite_skills &&
           data.favorite_skills
             .slice(0, 3)
-            .map((item) => <SkillCard key={item.id} />)}
+            .map((item) => (
+              <SkillCard
+                key={item.id}
+                skill={item.title}
+                icon={<img src={item.logo} className="" />}
+                description={item.description}
+              />
+            ))}
         <AddSkillCard
           setIsAddOpen={setIsAddOpen}
           isNormal={false}

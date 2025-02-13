@@ -4,7 +4,7 @@ import Posts from "./about/Posts";
 import SectionsButtons from "./about/SectionsButtons";
 import UserSkills from "./about/UserSkills";
 import EditAbout from "./edit/EditAbout";
-import AddSkillForm from "./about/AddSkillForm";
+import AddSkillForm from "./addSkill/AddSkillForm";
 
 function About({ isMyself, data, isEditAbout, setIsEditAbout }) {
   const [activeTab, setActiveTab] = useState("درباره");
@@ -17,7 +17,10 @@ function About({ isMyself, data, isEditAbout, setIsEditAbout }) {
       ) : (
         <>
           {isAddOpen ? (
-            <AddSkillForm isNormalSkill={isNormalSkill} />
+            <AddSkillForm
+              isNormalSkill={isNormalSkill}
+              setIsAddOpen={setIsAddOpen}
+            />
           ) : (
             <>
               <UserSkills

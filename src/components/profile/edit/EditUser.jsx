@@ -4,8 +4,8 @@ import { FaCamera } from "react-icons/fa";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { editProfile } from "services/profile";
 
-function EditUser({ setIsEditUser, Avatar, username, skill, email }) {
-  const [userData, setUserData] = useState({ username, skill, Avatar });
+function EditUser({ setIsEditUser, Avatar, username, skill, email, id }) {
+  const [userData, setUserData] = useState({ username, skill, Avatar, id });
   const [selectedFile, setSelectedFile] = useState(null);
 
   const queryClient = useQueryClient();
@@ -32,6 +32,7 @@ function EditUser({ setIsEditUser, Avatar, username, skill, email }) {
     const formData = new FormData();
     formData.append("username", userData.username);
     formData.append("user_profile_title", userData.skill);
+    formData.append("user_telegram_id", userData.id);
     if (selectedFile) {
       formData.append("Avatar", selectedFile);
     }
@@ -80,6 +81,14 @@ function EditUser({ setIsEditUser, Avatar, username, skill, email }) {
           name="skill"
           className="w-[200px] h-[40px] bg-[#EDF2F6] rounded-[5px] font-yekan p-3 outline-none"
           value={userData.skill}
+          onChange={handleChange}
+          disabled={isPending}
+        />
+        <input
+          type="text"
+          name="id"
+          className="w-[200px] h-[40px] bg-[#EDF2F6] rounded-[5px] font-yekan p-3 outline-none"
+          value={userData.id}
           onChange={handleChange}
           disabled={isPending}
         />

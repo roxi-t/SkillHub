@@ -18,6 +18,7 @@ function User({ data, isMyself, isEditUser, setIsEditUser, setIsEditAbout }) {
           username={data.username}
           email={data.email}
           skill={data.user_profile_title ? data.user_profile_title : ""}
+          id={data.user_telegram_id ? data.user_telegram_id : ""}
         />
       ) : (
         <>
