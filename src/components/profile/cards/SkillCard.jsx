@@ -12,7 +12,10 @@ function SkillCard({ skill, icon, tags }) {
           <div className="flex gap-2 mt-2">
             {tags &&
               tags.map((tag) => (
-                <p className="font-yekan text-[#9795B5] text-[14px] sm:text-[15px]">
+                <p
+                  key={tag}
+                  className="font-yekan text-[#9795B5] text-[14px] sm:text-[15px]"
+                >
                   #{tag}
                 </p>
               ))}
