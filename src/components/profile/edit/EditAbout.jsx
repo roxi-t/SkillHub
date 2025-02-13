@@ -18,8 +18,8 @@ function EditAbout({ setIsEditAbout, about }) {
       { bio },
       {
         onSuccess: () => {
-          setIsEditAbout(false);
           queryClient.invalidateQueries({ queryKey: ["profile"] });
+          setIsEditAbout(false);
         },
         onError: () => {
           alert("خطایی رخ داد. لطفا دوباره تلاش کنید.");

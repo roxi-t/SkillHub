@@ -11,7 +11,8 @@
       "router/*": ["src/router/*"],
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],
-      "layout/*": ["src/layout/*"]
+      "layout/*": ["src/layout/*"],
+      "hooks/*": ["src/hooks/*"]
     }
   }
 }

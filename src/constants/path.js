@@ -10,4 +10,5 @@ export const paths = [
   "utils",
   "layout",
   "constants",
+  "hooks",
 ];

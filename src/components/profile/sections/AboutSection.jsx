@@ -5,15 +5,17 @@ import { TfiAnnouncement } from "react-icons/tfi";
 import { FaStar } from "react-icons/fa";
 import AboutCard from "../cards/AboutCard";
 import { HiLightBulb } from "react-icons/hi";
+import useUserFromParams from "hooks/useUserFromParams";
 
 function AboutSection() {
+  const { name, job } = useUserFromParams();
   return (
     <div className="flex flex-col sm:flex-row gap-4 mx-2">
       <div className="w-full sm:max-w-[50%] flex flex-col">
         <div className="flex items-center gap-1">
           <IoMdBook className="w-[20px] h-[20px]" />
           <h1 className="text-[18px] font-yekan font-medium text-[#494953]">
-            درباره‌ی علی جانشاهی
+            درباره ی {name}
           </h1>
         </div>
         <p className="font-yekan font-extralight leading-6 text-[#494953] text-[14px] mt-3">
@@ -38,7 +40,7 @@ function AboutSection() {
             </h1>
           </div>
           <AboutCard
-            text="دیجیتال مارکتر در اسکیل‌هاب"
+            text={`${job} در اسکیل‌هاب`}
             icon={<TfiAnnouncement className="text-white w-[15px] h-[15px]" />}
           />
           <AboutCard

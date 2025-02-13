@@ -1,14 +1,15 @@
 import { FaArrowDown, FaArrowRight, FaArrowUp } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-import ali from "assets/images/ali.jpg";
+import useUserFromParams from "hooks/useUserFromParams";
 
 function SwapCard({ skill, opponentName, opponentPic, opponentSkill }) {
+  const { profile } = useUserFromParams();
   return (
     <div className="flex items-center sm:flex-row flex-col">
       <div className="flex w-[290px] h-[50px] bg-[#EDF2F6] rounded-[5px]">
         <div className="flex items-center gap-4 mx-4">
           <img
-            src={ali}
+            src={profile}
             alt="profile"
             className="w-[35px] h-[35px] object-cover rounded-full"
           />

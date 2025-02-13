@@ -1,10 +1,11 @@
 import { LuRefreshCw } from "react-icons/lu";
 import SwapCard from "../cards/SwapCard";
-import amir from "assets/images/amir.jpg";
+import amirali from "assets/images/amirali.jpg";
 import naser from "assets/images/naser.jpg";
 import mohammad from "assets/images/mohammad.jpg";
 
 function SwapSection() {
+  
   return (
     <div>
       <div className="flex items-center gap-1 mt-5">
@@ -27,16 +28,16 @@ function SwapSection() {
           opponentPic={mohammad}
         />
         <SwapCard
-          opponentName="امیر ملازمی"
+          opponentName="امیرعلی نیازی"
           skill="تولید محتوا"
           opponentSkill="طراحی محصول"
-          opponentPic={amir}
+          opponentPic={amirali}
         />
         <SwapCard
-          opponentName="امیر ملازمی"
+          opponentName="امیرعلی نیازی"
           skill="سئو"
           opponentSkill="مدیریت پروژه"
-          opponentPic={amir}
+          opponentPic={amirali}
         />
       </div>
     </div>

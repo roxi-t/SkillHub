@@ -1,7 +1,11 @@
+import useUserFromParams from "hooks/useUserFromParams";
 import AddSkillCard from "../cards/AddSkillCard";
 import SkillCard from "../cards/SkillCard";
+import { IoColorPaletteSharp, IoHardwareChipSharp } from "react-icons/io5";
+import { MdOutlineWeb } from "react-icons/md";
 
 function UserSkills({ isMyself, data }) {
+  const { job, icon: Icon } = useUserFromParams();
   return (
     <div>
       <div className="flex justify-between">
@@ -29,10 +33,32 @@ function UserSkills({ isMyself, data }) {
                 data.skills
                   .slice(0, 4)
                   .map((item) => <SkillCard key={item.id} />)} */}
-            <SkillCard />
-            <SkillCard />
-            <SkillCard />
-            <SkillCard />
+            <SkillCard
+              skill={job}
+              tags={["2025", "مهارت"]}
+              icon={<Icon className="w-[30px] mx-auto h-[30px] text-white" />}
+            />
+            <SkillCard
+              skill="مهندس سخت افزار"
+              tags={["2025", "مهارت"]}
+              icon={
+                <IoHardwareChipSharp className="w-[30px] mx-auto h-[30px] text-white" />
+              }
+            />
+            <SkillCard
+              skill="وبلاگ نویسی"
+              tags={["2025", "مهارت"]}
+              icon={
+                <MdOutlineWeb className="w-[30px] mx-auto h-[30px] text-white" />
+              }
+            />
+            <SkillCard
+              skill="گرافیک"
+              tags={["2025", "مهارت"]}
+              icon={
+                <IoColorPaletteSharp className="w-[30px] mx-auto h-[30px] text-white" />
+              }
+            />
           </>
         )}
       </div>

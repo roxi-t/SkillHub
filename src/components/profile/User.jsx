@@ -5,8 +5,11 @@ import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaRegCalendarAlt, FaRegEdit } from "react-icons/fa";
 import { TbDeviceAnalytics } from "react-icons/tb";
 import EditUser from "./edit/EditUser";
+import useUserFromParams from "hooks/useUserFromParams";
 
 function User({ data, isMyself, isEditUser, setIsEditUser, setIsEditAbout }) {
+  const { name, job, profile } = useUserFromParams();
+
   return (
     <div className="flex my-5 flex-col items-center mt-6 w-full xl:w-[15%] p-6">
       {isEditUser && isMyself ? (
@@ -20,19 +23,19 @@ function User({ data, isMyself, isEditUser, setIsEditUser, setIsEditAbout }) {
       ) : (
         <>
           <img
-            src={isMyself ? (data.Avatar ? data.Avatar : anonymous) : amirali}
+            src={isMyself ? (data.Avatar ? data.Avatar : anonymous) : profile}
             alt="profile"
             className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] lg:w-[180px] lg:h-[180px] object-cover rounded-full"
           />
           <h1 className="font-yekan text-[20px] md:text-[25px] font-semibold mt-5 text-[#494953]">
-            {isMyself ? data.username : "امیرعلی"}
+            {isMyself ? data.username : name}
           </h1>
           <p className="font-yekan text-[18px] md:text-[22px] mt-3 text-[#494953] font-light">
             {isMyself
               ? data.user_profile_title
                 ? data.user_profile_title
                 : "-"
-              : "دیجیتال مارکتر"}
+              : job}
           </p>
           <div className="flex mt-5">
             {[...Array(5)].map((_, i) => (

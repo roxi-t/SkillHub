@@ -1,5 +1,4 @@
-import { FiSave } from "react-icons/fi";
-import { FaStar } from "react-icons/fa6";
+import { FaRegBookmark, FaStar } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
@@ -30,7 +29,7 @@ function Card({ skill, tags, logo, user, job, name }) {
           </div>
         </div>
         <div>
-          <FiSave className="w-[19px] cursor-pointer h-[23px] text-[#615EFC]" />
+          <FaRegBookmark className="w-[19px] cursor-pointer h-[23px] text-[#615EFC]" />
         </div>
       </div>
       <div className="flex justify-between items-center mb-7">
