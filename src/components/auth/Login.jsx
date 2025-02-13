@@ -97,7 +97,11 @@ function Login() {
       <button
         type="submit"
         disabled={isPending}
-        className="mt-4 hover:border-red-500 border border-1 transition-all duration-300 bg-red-500 cursor-pointer hover:text-red-500 text-white text-sm font-semibold py-3 px-8 rounded-full hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        className={`mt-4 border border-1 transition-all duration-300 bg-red-500 cursor-pointer ${
+          !isPending
+            ? "hover:text-red-500 hover:bg-white hover:border-red-500"
+            : null
+        }  text-white text-sm font-semibold py-3 px-8 rounded-full disabled:opacity-50 flex items-center justify-center gap-2`}
       >
         <span>
           {isPending ? (

@@ -94,18 +94,14 @@ function EditUser({ setIsEditUser, Avatar, username, skill, email }) {
 
         <div className="flex justify-end items-center gap-2">
           <button
-            className={`bg-[#FF5656] w-[25px] h-[25px] flex items-center justify-center rounded-[5px] ${
-              isPending ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className="bg-[#FF5656] w-[25px] h-[25px] flex items-center justify-center rounded-[5px]"
             onClick={() => setIsEditUser(false)}
             disabled={isPending}
           >
             <VscChromeClose className="w-[15px] h-[15px] text-white" />
           </button>
           <button
-            className={`w-fit px-3 py-1 h-fit bg-[#615EFC] rounded-[5px] text-white font-yekan font-semibold ${
-              isPending ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            className="w-fit px-3 py-1 h-fit bg-[#615EFC] rounded-[5px] text-white font-yekan font-semibold"
             onClick={handleSubmit}
             disabled={isPending}
           >
