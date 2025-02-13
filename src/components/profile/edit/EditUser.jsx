@@ -3,6 +3,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import { FaCamera } from "react-icons/fa";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { editProfile } from "services/profile";
+import { toast } from "react-toastify";
 
 function EditUser({ setIsEditUser, Avatar, username, skill, email, id }) {
   const [userData, setUserData] = useState({ username, skill, Avatar, id });
@@ -38,11 +39,12 @@ function EditUser({ setIsEditUser, Avatar, username, skill, email, id }) {
     }
     mutate(formData, {
       onSuccess: () => {
+        toast.success("اطلاعات با موفقیت ذخیره شد");
         setIsEditUser(false);
         queryClient.invalidateQueries({ queryKey: ["profile"] });
       },
       onError: () => {
-        alert("خطایی رخ داد. لطفا دوباره تلاش کنید.");
+        toast.error("ذخیره اطلاعات با شکست همراه شد");
       },
     });
   };

@@ -4,9 +4,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import { FaSave } from "react-icons/fa";
 import { LuBellRing } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function HamburgerMenu({ data }) {
+  const navigate = useNavigate();
   return (
     <div className="lg:hidden mt-4 px-4">
       <nav className="flex flex-col gap-3 text-[#494953] font-yekan text-base bg-[#EDF2F6] p-4 rounded-lg shadow">
@@ -19,6 +20,7 @@ function HamburgerMenu({ data }) {
                 src={data.data.Avatar ? data.data.Avatar : anonymous}
                 alt="Profile"
                 className="w-[36px] h-[36px] md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
+                onClick={() => navigate("/profile")}
               />
             </>
           )}

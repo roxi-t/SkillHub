@@ -6,7 +6,7 @@ import { validations } from "utils/validation";
 import { authRegister } from "services/auth";
 import { useMutation } from "@tanstack/react-query";
 import Loading from "react-loading";
-import toastMaker from "utils/toastMaker";
+import { toast } from "react-toastify";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -40,7 +40,7 @@ function Register() {
     mutate(formData, {
       onSuccess: ({ response }) => {
         if (response) {
-          // toastMaker("success", "ثبت نام موفقیت‌آمیز بود!");
+          toast.success("ثبت نام موفقیت آمیز");
           setFormData({
             username: "",
             email: "",
@@ -49,10 +49,7 @@ function Register() {
         }
       },
       onError: (error) => {
-        toastMaker(
-          "error",
-          error.response?.data?.message || "خطایی رخ داده است"
-        );
+        toast.error(error.response?.data?.message || "خطایی رخ داده است");
       },
     });
   };

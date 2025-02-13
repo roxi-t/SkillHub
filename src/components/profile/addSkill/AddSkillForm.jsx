@@ -8,6 +8,7 @@ import { getAllSkills, getAllAreas } from "services/skill";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import ReactLoading from "react-loading";
 import { addSkills } from "services/skill";
+import { toast } from "react-toastify";
 
 function AddSkillForm({ isNormalSkill, setIsAddOpen }) {
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -34,11 +35,12 @@ function AddSkillForm({ isNormalSkill, setIsAddOpen }) {
       { skill_id: selectedSkill.value, isNormalSkill },
       {
         onSuccess: () => {
+          toast.success("اطلاعات با موفقیت ذخیره شد");
           queryClient.invalidateQueries({ queryKey: ["profile"] });
           setIsAddOpen(false);
         },
         onError: () => {
-          alert("خطایی رخ داد. لطفا دوباره تلاش کنید.");
+          toast.error("ذخیره اطلاعات با شکست همراه شد");
         },
       }
     );

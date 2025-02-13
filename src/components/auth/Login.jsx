@@ -7,7 +7,7 @@ import { authLogin } from "services/auth";
 import { setCookie } from "utils/cookie";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Loading from "react-loading";
-import toastMaker from "utils/toastMaker";
+import { toast } from "react-toastify";
 
 function Login() {
   const navigate = useNavigate();
@@ -23,6 +23,12 @@ function Login() {
     setErrors({ ...errors, [field]: "" });
   };
 
+  const icons = [
+    { Icon: FaGithub, link: "#" },
+    { Icon: FaFacebook, link: "#" },
+    { Icon: FaGoogle, link: "#" },
+  ];
+
   const handleLogin = async (e) => {
     e.preventDefault();
     const validationErrors = await validations(formData);
@@ -34,14 +40,14 @@ function Login() {
     mutate(formData, {
       onSuccess: ({ response }) => {
         if (response) {
+          toast.success("ورود موفقیت آمیز");
           setCookie(response.data);
           queryClient.invalidateQueries({ queryKey: ["profile"] });
           navigate("/explorer");
         }
       },
       onError: (error) => {
-        toastMaker(
-          "error",
+        toast.error(
           error.response?.data?.message || "مشکلی در ورود به سیستم وجود دارد"
         );
       },
@@ -54,25 +60,16 @@ function Login() {
       onSubmit={handleLogin}
     >
       <h1 className="text-2xl font-bold text-gray-700 font-yekan">ورود</h1>
-      <div className="flex justify-center space-x-4 my-4">
-        <Link
-          to="#"
-          className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full"
-        >
-          <FaGithub />
-        </Link>
-        <Link
-          to="#"
-          className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full"
-        >
-          <FaFacebook />
-        </Link>
-        <Link
-          to="#"
-          className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full"
-        >
-          <FaGoogle />
-        </Link>
+      <div className="flex justify-center gap-2 my-4">
+        {icons.map(({ Icon, link }, index) => (
+          <Link
+            key={index}
+            to={link}
+            className="flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full"
+          >
+            <Icon />
+          </Link>
+        ))}
       </div>
       <InputField
         type="username"

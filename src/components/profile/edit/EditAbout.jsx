@@ -3,6 +3,7 @@ import { IoBookOutline } from "react-icons/io5";
 import { VscChromeClose } from "react-icons/vsc";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { editProfile } from "services/profile";
+import { toast } from "react-toastify";
 
 function EditAbout({ setIsEditAbout, about }) {
   const [bio, setBio] = useState(about || "");
@@ -18,11 +19,12 @@ function EditAbout({ setIsEditAbout, about }) {
       { bio },
       {
         onSuccess: () => {
+          toast.success("اطلاعات با موفقیت ذخیره شد");
           queryClient.invalidateQueries({ queryKey: ["profile"] });
           setIsEditAbout(false);
         },
         onError: () => {
-          alert("خطایی رخ داد. لطفا دوباره تلاش کنید.");
+          toast.error("ذخیره اطلاعات با شکست همراه شد");
         },
       }
     );

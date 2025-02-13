@@ -1,9 +1,10 @@
 import anonymous from "assets/images/anonymous.png";
 import { FaSave } from "react-icons/fa";
 import { LuBellRing } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Buttons({ data }) {
+  const navigate = useNavigate();
   return (
     <div className="hidden gap-4 md:gap-6 items-center lg:flex">
       {data ? (
@@ -14,6 +15,7 @@ function Buttons({ data }) {
             src={data.data.Avatar ? data.data.Avatar : anonymous}
             alt="Profile"
             className="w-[36px] h-[36px] object-cover md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
+            onClick={() => navigate("/profile")}
           />
         </>
       ) : (
