@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const useUserFromParams = () => {
   const { name } = useParams();
   const userData = user.find((u) => u.nickname === name);
-  return userData || null;
+  return userData || {};
 };
 
 export default useUserFromParams;

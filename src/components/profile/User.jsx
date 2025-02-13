@@ -1,5 +1,4 @@
 import { FaStar } from "react-icons/fa6";
-import amirali from "assets/images/amirali.jpg";
 import anonymous from "assets/images/anonymous.png";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaRegCalendarAlt, FaRegEdit } from "react-icons/fa";
