@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CheckBox from "./checkBox";
+import CheckBox from "./CheckBox";
 import Counter from "./Counter";
 import Buttons from "./Buttons";
 import Input from "./Input";
