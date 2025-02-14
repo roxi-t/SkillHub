@@ -39,13 +39,15 @@ function Register() {
 
     mutate(formData, {
       onSuccess: ({ response }) => {
-        if (response) {
+        if (response?.data) {
           toast.success("ثبت نام موفقیت آمیز");
           setFormData({
             username: "",
             email: "",
             password: "",
           });
+        } else {
+          toast.error("این کاربر قبلا ثبت شده است");
         }
       },
       onError: (error) => {

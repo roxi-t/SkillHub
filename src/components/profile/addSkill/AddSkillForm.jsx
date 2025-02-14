@@ -34,10 +34,14 @@ function AddSkillForm({ isNormalSkill, setIsAddOpen }) {
     mutate(
       { skill_id: selectedSkill.value, isNormalSkill },
       {
-        onSuccess: () => {
-          toast.success("اطلاعات با موفقیت ذخیره شد");
-          queryClient.invalidateQueries({ queryKey: ["profile"] });
-          setIsAddOpen(false);
+        onSuccess: ({ response }) => {
+          if (response?.data) {
+            toast.success("اطلاعات با موفقیت ذخیره شد");
+            setIsAddOpen(false);
+            queryClient.invalidateQueries({ queryKey: ["profile"] });
+          } else {
+            toast.error("این مهارت قبلا ثبت شده است");
+          }
         },
         onError: () => {
           toast.error("ذخیره اطلاعات با شکست همراه شد");

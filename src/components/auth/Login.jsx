@@ -39,17 +39,17 @@ function Login() {
 
     mutate(formData, {
       onSuccess: ({ response }) => {
-        if (response) {
+        if (response?.data) {
           toast.success("ورود موفقیت آمیز");
           setCookie(response.data);
           queryClient.invalidateQueries({ queryKey: ["profile"] });
           navigate("/explorer");
+        } else {
+          toast.error("نام کاربری یا رمز عبور اشتباه است");
         }
       },
-      onError: (error) => {
-        toast.error(
-          error.response?.data?.message || "مشکلی در ورود به سیستم وجود دارد"
-        );
+      onError: () => {
+        toast.error("مشکلی در ورود به سیستم وجود دارد");
       },
     });
   };

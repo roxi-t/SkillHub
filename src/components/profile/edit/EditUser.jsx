@@ -38,10 +38,15 @@ function EditUser({ setIsEditUser, Avatar, username, skill, email, id }) {
       formData.append("Avatar", selectedFile);
     }
     mutate(formData, {
-      onSuccess: () => {
-        toast.success("اطلاعات با موفقیت ذخیره شد");
-        setIsEditUser(false);
-        queryClient.invalidateQueries({ queryKey: ["profile"] });
+      onSuccess: ({ response }) => {
+        console.log(response);
+        if (response?.data) {
+          toast.success("اطلاعات با موفقیت ذخیره شد");
+          setIsEditUser(false);
+          queryClient.invalidateQueries({ queryKey: ["profile"] });
+        } else {
+          toast.error("تام کاربری معتبر انتخاب کتید");
+        }
       },
       onError: () => {
         toast.error("ذخیره اطلاعات با شکست همراه شد");

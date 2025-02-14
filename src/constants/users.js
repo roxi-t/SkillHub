@@ -1,7 +1,7 @@
 import amir from "assets/images/amir.jpg";
-import sina from "assets/images/sina.jpg";
-import ali from "assets/images/ali.jpg";
-import { FaProductHunt, FaSearch } from "react-icons/fa";
+import roxana from "assets/images/roxana.jpg";
+import matin from "assets/images/matin.jpg";
+import { FaRobot, FaSearch } from "react-icons/fa";
 import { VscTerminalCmd } from "react-icons/vsc";
 
 export const user = [
@@ -14,18 +14,18 @@ export const user = [
     favourite: "برنامه نویسی",
   },
   {
-    name: "سینا رضایی",
-    job: "طراح محصول",
-    nickname: "sina",
-    profile: sina,
-    icon: FaProductHunt,
-    favourite: "طراحی محصول",
+    name: "متین قربانی",
+    job: "هوش مصنوعی",
+    nickname: "matin",
+    profile: matin,
+    icon: FaRobot,
+    favourite: "هوش مصنوعی",
   },
   {
-    name: "علی جانشاهی",
+    name: "رکسانا تیموری",
     job: "دیجیتال مارکتر",
-    nickname: "ali",
-    profile: ali,
+    nickname: "roxana",
+    profile: roxana,
     icon: FaSearch,
     favourite: "دیجیتال مارکتینگ",
   },

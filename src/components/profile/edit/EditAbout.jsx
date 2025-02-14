@@ -18,10 +18,12 @@ function EditAbout({ setIsEditAbout, about }) {
     mutate(
       { bio },
       {
-        onSuccess: () => {
-          toast.success("اطلاعات با موفقیت ذخیره شد");
-          queryClient.invalidateQueries({ queryKey: ["profile"] });
-          setIsEditAbout(false);
+        onSuccess: ({ response }) => {
+          if (response?.data) {
+            toast.success("اطلاعات با موفقیت ذخیره شد");
+            queryClient.invalidateQueries({ queryKey: ["profile"] });
+            setIsEditAbout(false);
+          }
         },
         onError: () => {
           toast.error("ذخیره اطلاعات با شکست همراه شد");

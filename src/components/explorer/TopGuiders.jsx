@@ -1,6 +1,6 @@
 import GuideCard from "./GuideCard";
-import ali from "assets/images/ali.jpg";
-import sina from "assets/images/sina.jpg";
+import roxana from "assets/images/roxana.jpg";
+import matin from "assets/images/matin.jpg";
 import amir from "assets/images/amir.jpg";
 
 function TopGuiders() {
@@ -16,16 +16,16 @@ function TopGuiders() {
       </div>
       <div className="flex flex-wrap gap-4 lg:justify-between justify-center">
         <GuideCard
-          name="علی جانشاهی"
+          name="رکسانا تیموری"
           skill="دیجیتال مارکتر"
-          image={ali}
-          user="ali"
+          image={roxana}
+          user="roxana"
         />
         <GuideCard
-          name="سینا رضایی"
-          skill="طراح محصول"
-          image={sina}
-          user="sina"
+          name="متین قربانی"
+          skill="هوش مصنوعی"
+          image={matin}
+          user="matin"
         />
         <GuideCard
           name="امیرمحمد ملازمی"

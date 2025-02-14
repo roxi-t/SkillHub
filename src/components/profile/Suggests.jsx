@@ -1,5 +1,6 @@
 import naser from "assets/images/naser.jpg";
 import amirali from "assets/images/amirali.jpg";
+import sina from "assets/images/sina.jpg";
 import mohammad from "assets/images/mohammad.jpg";
 import SuggestGuiders from "./suggests/SuggestGuiders";
 import SuggestPost from "./suggests/SuggestPost";
@@ -21,7 +22,7 @@ function Suggests() {
           skill="دیجیتال مارکتر جنرالیست"
           profile={amirali}
         />
-        <SuggestGuiders name="علی شهبازی" skill="متخصص محتوا" />
+        <SuggestGuiders name="علی شهبازی" skill="متخصص محتوا" profile={sina} />
         <SuggestGuiders
           name="محمد کریمی"
           skill="طراح گرافیک"
