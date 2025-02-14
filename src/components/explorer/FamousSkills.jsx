@@ -1,7 +1,7 @@
 import { VscTerminalCmd } from "react-icons/vsc";
 import Card from "./Card";
-import { IoCubeOutline } from "react-icons/io5";
 import { GrAnnounce } from "react-icons/gr";
+import { GiAtom } from "react-icons/gi";
 
 function FamousSkills() {
   return (
@@ -18,30 +18,28 @@ function FamousSkills() {
         <Card
           skill="شی‌گرایی در پایتون"
           tags={["برنامه نویسی", "پایتون"]}
-          user="امیرمحمد ملازمی"
+          user="متین قربانی"
           logo={
             <VscTerminalCmd className="w-[30px] mx-auto h-[30px] text-white" />
           }
           job="برنامه‌نویس"
-          name="amir"
+          name="matin"
         />
         <Card
-          skill="طراحی محصول"
-          tags={["طراح محصول", "محصول"]}
-          user="سینا رضایی"
-          logo={
-            <IoCubeOutline className="w-[30px] mx-auto h-[30px] text-white" />
-          }
-          job="طراح محصول"
-          name="sina"
+          skill="کتابخانه React"
+          tags={["کتابخانه", "وب"]}
+          user="امیرمحمد ملازمی"
+          logo={<GiAtom className="w-[30px] mx-auto h-[30px] text-white" />}
+          job="برنامه نویس وب"
+          name="amir"
         />
         <Card
           skill="دیجیتال مارکتینگ"
           tags={["محتوا", "دیجیتال"]}
-          user="علی جانشاهی"
+          user="رکسانا تیموری"
           logo={<GrAnnounce className="w-[30px] mx-auto h-[30px] text-white" />}
           job="دیجیتال مارکتر"
-          name="ali"
+          name="roxana"
         />
       </div>
     </div>
