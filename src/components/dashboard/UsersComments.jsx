@@ -1,15 +1,15 @@
+import ali from "assets/images/ali.jpg";
+import amir from "assets/images/amir.jpg";
+
 function UsersComments() {
   return (
     <section className="text-center px-5 py-16 mb-24 font-yekan">
-      <h2 className="text-pattern text-lg text-[#615EFC] font-medium uppercase mb-2">
-        - نظرات کاربران
-      </h2>
-      <h2 className="text-2xl font-bold text-[#615EFC] mb-2.5">
-        نظر کاربران ما
+      <h2 className="text-[40px] font-bold text-[#494953] mb-2">
+        مشتریان ما چه می‌گویند
       </h2>
       <p className="text-base text-[#7d7d7d] mb-10">
-        نظرات کاربران ما را درباره پلتفرم و تجربیاتشان در زمینه تبادل مهارت‌ها
-        بخوانید.
+        کشف کنید که کاربران ما درباره پلتفرم ما و تجربیاتشان با تبادل مهارت چه
+        نظری دارند.
       </p>
       <div className="flex justify-center gap-12 px-2 flex-wrap">
         <div className="bg-[#EDF2F6] p-5 rounded-xl max-w-[280px] max-h-[400px] text-left flex flex-col justify-between">
@@ -18,17 +18,21 @@ function UsersComments() {
             اشتراک‌گذاری تجربه‌ها و یادگیری از دیگران بسیار مفید است.
           </p>
           <div className="flex items-center justify-between gap-2.5 mt-2.5">
-            <div>
-              <h5 className="text-[#494953] font-bold text-sm text-right">
-                محمد صادقی
-              </h5>
-              <p className="text-[#7d7d7d] text-sm text-right">طراح</p>
+            <div className="flex gap-3 items-center">
+              <img
+                className="w-[45px] h-[45px] rounded-full object-cover"
+                src={ali}
+                alt="کاربر"
+              />
+              <div className=" flex flex-col">
+                <h5 className="text-[#494953] font-bold text-sm text-right">
+                  علی جانشاهی
+                </h5>
+                <p className="text-[#7d7d7d] text-sm text-right">
+                  دیجیتال مارکتر
+                </p>
+              </div>
             </div>
-            <img
-              className="w-[45px] h-[45px] rounded-full object-cover"
-              src={""}
-              alt="کاربر"
-            />
           </div>
         </div>
         <div className="bg-[#EDF2F6] p-5 rounded-xl max-w-[280px] max-h-[400px] text-left flex flex-col justify-between">
@@ -38,17 +42,19 @@ function UsersComments() {
             کاربران است.
           </p>
           <div className="flex items-center justify-between gap-2.5 mt-2.5">
-            <div>
-              <h5 className="text-[#494953] font-bold text-sm text-right">
-                مریم آقایی
-              </h5>
-              <p className="text-[#7d7d7d] text-sm text-right">برنامه‌نویس</p>
+            <div className="flex gap-3 items-center">
+              <img
+                className="w-[45px] h-[45px] rounded-full object-cover"
+                src={amir}
+                alt="کاربر"
+              />
+              <div className=" flex flex-col">
+                <h5 className="text-[#494953] font-bold text-sm text-right">
+                  امیرمحمد ملازمی
+                </h5>
+                <p className="text-[#7d7d7d] text-sm text-right">برنامه‌نویس</p>
+              </div>
             </div>
-            <img
-              className="w-[45px] h-[45px] rounded-full object-cover"
-              src={""}
-              alt="کاربر"
-            />
           </div>
         </div>
       </div>

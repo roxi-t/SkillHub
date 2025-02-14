@@ -1,5 +1,5 @@
-import AppStoreIcon from "assets/images/appstore.svg";
-import GooglePlayIcon from "assets/images/googleplay.svg";
+import AppStoreIcon from "assets/images/appstore.png";
+import GooglePlayIcon from "assets/images/googleplay.png";
 import User1 from "assets/images/first.svg";
 import User2 from "assets/images/second.svg";
 import User3 from "assets/images/third.svg";

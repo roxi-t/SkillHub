@@ -1,17 +1,17 @@
-import AppStoreIcon from "assets/images/appstore.svg";
-import GooglePlayIcon from "assets/images/googleplay.svg";
+import AppStoreIcon from "assets/images/appstore.png";
+import GooglePlayIcon from "assets/images/googleplay.png";
 
 const PromoBanner = () => {
   return (
     <section className="flex justify-center items-center relative z-10 w-full sm:text-center sm:bg-transparent font-yekan">
-      <div className="bg-[#6A7EFC] lg:w-3/4 h-[450px] lg:rounded-3xl flex flex-col justify-center items-center relative md:-mt-24">
-        <p className="text-white lg:text-lg text-sm mb-12 text-center">
-          راه‌حل نهایی شما برای تغییر مهارت‌ها بدون دردسر!
+      <div className="bg-[#6A7EFC] lg:w-3/4 h-[450px] lg:rounded-3xl flex flex-col justify-center items-center relative md:-mt-24 rounded-[30px]">
+        <p className="text-[#EDF2F6] lg:text-[28px] font-bold text-sm mb-12 text-center">
+          راه‌حل نهایی شما برای تبادل مهارت!
         </p>
-        <h2 className="lg:text-5xl text-2xl text-[#EDF2F6] font-semibold text-center mb-6">
-          همین حالا اپلیکیشن را دانلود کنید!
+        <h2 className="lg:text-[60px] text-3xl text-[#EDF2F6] font-extrabold text-center mb-12">
+          همین حالا اسکیل‌هاب را دانلود کنید
         </h2>
-        <p className="text-white md:text-lg text-sm text-center">
+        <p className="text-white md:text-[20px] text-sm text-center">
           همین حالا به جامعه ما بپیوندید! اپلیکیشن را دانلود کنید و مهارت‌های
           خود را به اشتراک بگذارید و یاد بگیرید.
         </p>

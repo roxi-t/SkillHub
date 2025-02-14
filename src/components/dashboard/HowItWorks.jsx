@@ -7,10 +7,10 @@ const HowItWorks = () => {
   return (
     <section className="text-center px-0 py-14 bg-white relative z-10 font-yekan">
       <h2 className="text-base text-[#6A7EFC] font-semibold mb-3">
-        – نحوه عملکرد
+        – چگونه کار می‌کند
       </h2>
       <h3 className="md:text-4xl text-2xl font-bold text-[#494953] mb-4">
-        آشنا شوید با نحوه کار
+        با نحوه انجام کارها آشنا شوید
       </h3>
       <p className="md:text-base text-sm text-[#7d7d7d] mb-10 max-w-[600px] mx-auto my-0">
         یاد بگیرید چگونه پلتفرم ما کاربران را برای تبادل مهارت‌ها به هم متصل
