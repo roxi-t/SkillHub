@@ -9,6 +9,6 @@ export const paths = [
   "styles",
   "utils",
   "layout",
-  "constants",
   "hooks",
+  "constants",
 ];
