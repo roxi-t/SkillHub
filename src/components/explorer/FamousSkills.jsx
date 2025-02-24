@@ -18,20 +18,20 @@ function FamousSkills() {
         <Card
           skill="شی‌گرایی در پایتون"
           tags={["برنامه نویسی", "پایتون"]}
-          user="متین قربانی"
+          user="حدیث حافظ"
           logo={
             <VscTerminalCmd className="w-[30px] mx-auto h-[30px] text-white" />
           }
-          job="برنامه‌نویس"
-          name="matin"
+          job="طراح رابط کاربری"
+          name="hadis"
         />
         <Card
           skill="کتابخانه React"
           tags={["کتابخانه", "وب"]}
-          user="امیرمحمد ملازمی"
+          user="فاطمه دلخوش"
           logo={<GiAtom className="w-[30px] mx-auto h-[30px] text-white" />}
           job="برنامه نویس وب"
-          name="amir"
+          name="fatemeh"
         />
         <Card
           skill="دیجیتال مارکتینگ"

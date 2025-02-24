@@ -1,5 +1,5 @@
 import ali from "assets/images/ali.jpg";
-import amir from "assets/images/amir.jpg";
+import fatemeh from "assets/images/fatemeh.jpg";
 
 function UsersComments() {
   return (
@@ -45,12 +45,12 @@ function UsersComments() {
             <div className="flex gap-3 items-center">
               <img
                 className="w-[45px] h-[45px] rounded-full object-cover"
-                src={amir}
+                src={fatemeh}
                 alt="کاربر"
               />
               <div className=" flex flex-col">
                 <h5 className="text-[#494953] font-bold text-sm text-right">
-                  امیرمحمد ملازمی
+                  فاطمه دلخوش
                 </h5>
                 <p className="text-[#7d7d7d] text-sm text-right">برنامه‌نویس</p>
               </div>

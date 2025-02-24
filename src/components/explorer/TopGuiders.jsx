@@ -1,7 +1,7 @@
 import GuideCard from "./GuideCard";
 import roxana from "assets/images/roxana.jpg";
-import matin from "assets/images/matin.jpg";
-import amir from "assets/images/amir.jpg";
+import hadis from "assets/images/hadis.jpg";
+import fatemeh from "assets/images/fatemeh.jpg";
 
 function TopGuiders() {
   return (
@@ -22,16 +22,16 @@ function TopGuiders() {
           user="roxana"
         />
         <GuideCard
-          name="متین قربانی"
-          skill="هوش مصنوعی"
-          image={matin}
-          user="matin"
+          name="حدیث حافظ"
+          skill="طراح رابط کاربری"
+          image={hadis}
+          user="hadis"
         />
         <GuideCard
-          name="امیرمحمد ملازمی"
+          name="فاطمه دلخوش"
           skill="برنامه نویس"
-          image={amir}
-          user="amir"
+          image={fatemeh}
+          user="fatemeh"
         />
       </div>
     </div>

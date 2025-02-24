@@ -1,6 +1,5 @@
-import exploreIcon from "assets/images/explore.svg";
-import trackerIcon from "assets/images/tracker1.svg";
-import chatIcon from "assets/images/chat1.svg";
+import exploreIcon from "assets/images/explore.png";
+import trackerIcon from "assets/images/tracker1.png";
 
 function FeaturesSection() {
   return (
@@ -51,7 +50,7 @@ function FeaturesSection() {
             با افراد ارتباط برقرار کنید و یاد بگیرید یا راهنمایی کنید.
           </p>
           <img
-            src={chatIcon}
+            src={exploreIcon}
             alt="یادگیری و راهنمایی"
             className="duration-500 ease-in-out hover:-translate-y-2 shadow-lg hover:shadow-xl w-full md:w-[95%] mx-auto"
           />

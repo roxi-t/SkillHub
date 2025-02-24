@@ -1,23 +1,23 @@
-import amir from "assets/images/amir.jpg";
+import hadis from "assets/images/hadis.jpg";
 import roxana from "assets/images/roxana.jpg";
-import matin from "assets/images/matin.jpg";
+import fatemeh from "assets/images/fatemeh.jpg";
 import { FaRobot, FaSearch } from "react-icons/fa";
 import { VscTerminalCmd } from "react-icons/vsc";
 
 export const user = [
   {
-    name: "امیرمحمد ملازمی",
-    job: "برنامه نویس",
-    nickname: "amir",
-    profile: amir,
+    name: "حدیث حافظ",
+    job: "طراح رابط کاربری",
+    nickname: "hadis",
+    profile: hadis,
     icon: VscTerminalCmd,
     favourite: "برنامه نویسی",
   },
   {
-    name: "متین قربانی",
-    job: "هوش مصنوعی",
-    nickname: "matin",
-    profile: matin,
+    name: "فاطمه دلخوش",
+    job: "برنامه نویس",
+    nickname: "fatemeh",
+    profile: fatemeh,
     icon: FaRobot,
     favourite: "هوش مصنوعی",
   },

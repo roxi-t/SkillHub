@@ -1,7 +1,6 @@
 import present5demo from "assets/images/present5.png";
 import present6demo from "assets/images/present6.png";
 import present2Demo from "assets/images/present2.png";
-import present4demo from "assets/images/present4.png";
 import Present1demo from "assets/images/Present1.png";
 import present3demo from "assets/images/present3.png";
 
@@ -20,12 +19,12 @@ function AppDemoSection() {
       <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
         <div className="w-full sm:w-1/2 md:w-1/4 max-w-xs md:max-w-none">
           <img
-            src={present5demo}
+            src={present2Demo}
             className="hidden sm:block mb-3 w-full transition-transform duration-500 ease-in-out hover:-translate-y-2 shadow-lg hover:shadow-xl"
             alt="Demo 1"
           />
           <img
-            src={present6demo}
+            src={present5demo}
             className="hidden sm:block mb-3 w-full transition-transform duration-500 ease-in-out hover:-translate-y-2 shadow-lg hover:shadow-xl"
             alt="Demo 2"
           />
@@ -37,7 +36,7 @@ function AppDemoSection() {
             alt="Demo 3"
           />
           <img
-            src={present4demo}
+            src={present2Demo}
             className="hidden sm:block mb-3 w-full transition-transform duration-500 ease-in-out hover:-translate-y-2 shadow-lg hover:shadow-xl"
             alt="Demo 4"
           />
@@ -49,7 +48,7 @@ function AppDemoSection() {
             alt="Demo 5"
           />
           <img
-            src={present2Demo}
+            src={present6demo}
             className="mb-3 w-full transition-transform duration-500 ease-in-out hover:-translate-y-2 shadow-lg hover:shadow-xl"
             alt="Demo 6"
           />
