@@ -2,7 +2,7 @@ import api from "configs/api";
 
 const getAllSkills = async () => {
   try {
-    const response = await api.get("api/skills/");
+    const response = await api.get("api/skills/?pagination=false");
     return { response };
   } catch (error) {
     return { error };
@@ -11,7 +11,7 @@ const getAllSkills = async () => {
 
 const getAllAreas = async () => {
   try {
-    const response = await api.get("api/skills/areas/");
+    const response = await api.get("api/skills/areas/?pagination=false");
     return { response };
   } catch (error) {
     return { error };

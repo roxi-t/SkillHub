@@ -69,7 +69,7 @@ function AddSkillForm({ isNormalSkill, setIsAddOpen }) {
           ) : (
             <>
               <Options
-                allSkills={allSkills.response.data.results}
+                allSkills={allSkills?.response?.data}
                 allAreas={data.response.data.results}
                 selectedAreas={selectedAreas}
                 selectedSkill={selectedSkill}
