@@ -23,16 +23,14 @@ function UserSkills({ isMyself, data, setIsAddOpen, setIsNormalSkill }) {
         {isMyself ? (
           <>
             {data.user_skills &&
-              data.user_skills
-                .slice(0, 3)
-                .map((item) => (
-                  <SkillCard
-                    key={item.id}
-                    skill={item.title}
-                    icon={<img src={item.logo} className="" />}
-                    description={item.description}
-                  />
-                ))}
+              data.user_skills.map((item) => (
+                <SkillCard
+                  key={item.id}
+                  skill={item.title}
+                  icon={<img src={item.logo} className="" />}
+                  description={item.description}
+                />
+              ))}
             <AddSkillCard
               isNormal={true}
               setIsAddOpen={setIsAddOpen}
